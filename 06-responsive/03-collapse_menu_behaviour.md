@@ -3,7 +3,9 @@ Collapse Menu Behaviour
 
 The collapsed menu setting determines the change in the display of the main menu when the browser is below or resized below the navcollapse value set in the breakpoints.
 
-
+### Collapse Menu Settings
+![Collapse Menu settings](/zen-grid-framework-4/images/responsive/collapsemenu.jpg)
+  
 	
 No Change
 ----

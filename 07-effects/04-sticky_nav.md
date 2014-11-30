@@ -1,6 +1,6 @@
 Sticky Nav
 ====
 
-### Select elements you want to include
+### Enable the sticky nav
 ![Enable Sticky Nav](/zen-grid-framework-4/images/effects/sticky.jpg)
  

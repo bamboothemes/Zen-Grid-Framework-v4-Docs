@@ -19,6 +19,10 @@ Using variables for breakpoints allows us to control the way that the design wor
 
 The language used in the theme settings for breakpoints refer to device types however these are meant be be more of a guide rather than specifically related to the device type specified.
 
+### Breakpoint Settings
+![Breakpoint Settings](/zen-grid-framework-4/images/responsive/breakpoints.jpg)
+  
+
 Desktop, tablet and phone references in the layout tool
 ----
 The breakpoints set in the responsive > breakpoint panel dictate the browser widths referenced in the layout tool. The layout tool allows the user to hide or stack modules using the tablet and the phone breakpoints specified in the breakpoint section.
