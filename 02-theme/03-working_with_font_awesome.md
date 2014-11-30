@@ -5,10 +5,19 @@ Zen Grid Framework v4 themes use the <a href="http://fortawesome.github.io/Font-
 
 ![Font Awesome](/zen-grid-framework-4/images/theme/fontawesome.jpg)
 
+
+Options
+----
+
 There are three basic options for including Font Awesome with your theme.
 - Do not include
 - Minimum
 - Full Library
+
+Dependancy for Zen Shortcode plugin
+----
+
+If you intended to use the Zen Shortcode plugin to render icons then you will either need to set this option to at least the minimumum level and most likely the full level, or include the font awesome library via the plugin settings. The Zen Shortcode plugin makes it possible to load the Font Awesome library via a local file or via the Font Awesome CDN.
 
 Do not include
 ----
@@ -22,10 +31,7 @@ This option will not load any icons from the Font Awesome library into your css 
 
 If you are not using any of these functions with the template then it will be safe to use the do not include option.
 
-Zen Shortcode plugin compatibility
-----
 
-If you intended to use the Zen Shortcode plugin to render icons then you will either need to set this option to at least the minumum level and most likely the full level, or include the font awesome library via the plugin settings. The Zen Shortcode plugin makes it possible to load the Font Awesome library via a local file or via the Font Awesome CDN.
 
 Minimum
 ----
