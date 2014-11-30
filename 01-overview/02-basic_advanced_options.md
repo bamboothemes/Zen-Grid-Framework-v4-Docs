@@ -11,7 +11,7 @@ Basic mode is aimed at users who are happy to use the default advanced settings 
 Basic and advanced mode are toggled on specific panels with a Hide Advanced / Show Advanced toggle button. The button toggles the setting for all panels and the basic / advanced state is saved when the user saves their settings.
 
 
-![Basic Mode](/images/display/basic-mode.jpg)
+![Basic Mode](/zengrid-framework-v4/images/display/basic-mode.jpg)
 
 Users can click on the Advanced setting toggle while editing the template settings in order to hide or display.
 
