@@ -16,7 +16,7 @@ Publish the plugin
 ----
 The plugin is not publish by default after installation so you will need to publish the plugin via the extension manager. Navigate to the the extensions > plugin manager and type "zen" into the search box. The Zen Menu plugin should appear int he filtered list. 
 
-![Publish Zen Menu](/zen-grid-framework-4/images/menu/enable_zenmenu.jpg)
+![Publish Zen Menu](/zen-grid-framework-4/images/menu/enable_zenmenu.png)
   
   
 Click on the red status icon next to the plugin name to ensure it is published.
@@ -29,12 +29,12 @@ To see the menu params for the zenmenu plugin navigate to the menu manager and e
 
 Click on the Zen Menu tab in the menu manager
 ----
-![Publish Zen Menu](/zen-grid-framework-4/images/menu/zenmenu-tab.jpg)
+![Publish Zen Menu](/zen-grid-framework-4/images/menu/zenmenu-tab.png)
 
 
 Menu options
 ----
-![Publish Zen Menu](/zen-grid-framework-4/images/menu/zenmenu-params.jpg)
+![Publish Zen Menu](/zen-grid-framework-4/images/menu/zenmenu-params.png)
 
 
 ### Subtitle
