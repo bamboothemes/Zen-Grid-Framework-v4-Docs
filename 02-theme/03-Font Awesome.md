@@ -1,6 +1,6 @@
 Working with the Font Awesome Font Library
 ====
-
+ 
 Zen Grid Framework v4 themes use the <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> font icon library to render some of it's elements on the page. The manner in which you want to use the template should determine the option required for the Font Awesome panel found at the bottom of the theme panel.
 
 <img src="{{ "fontawesome.jpg" | asset_url }}">

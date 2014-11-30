@@ -1,6 +1,6 @@
 Rebranding your template
 ======
-
+ 
  Joomlabamboo themes come with our logo on the bottom right hand corner of the page by default.
  
 This logo can be removed in the overview panel in the template settings.

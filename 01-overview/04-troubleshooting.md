@@ -1,7 +1,7 @@
 Troubleshooting
 ======
 
-
+ 
 Zen Grid Framework based themes have smart troubleshooting routines which can be found on the overview panel in the template settings. The warnings that can be found here provide further information for some common issues that can face some users.
 
 <img src="{{ "troubleshooting.jpg" | asset_url }}">
