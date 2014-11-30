@@ -10,12 +10,13 @@ Basic Mode
 Basic mode is aimed at users who are happy to use the default advanced settings in the template and make simple changes to layout, theme selector, fonts etc. When basic mode is enabled the advanced options are hidden from view making the interface more focussed and easier to navigate.
 Basic and advanced mode are toggled on specific panels with a Hide Advanced / Show Advanced toggle button. The button toggles the setting for all panels and the basic / advanced state is saved when the user saves their settings.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images//basic-mode.jpg" alt="image" />
+
+![Basic Mode](images/basic-mode.jpg)
 
 Users can click on the Advanced setting toggle while editing the template settings in order to hide or display.
 
 ### Example of layout settings with advanced options enabled.
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images//advanced-mode.jpg" alt="image" />
+<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/advanced-mode.jpg" alt="image" />
 
 Advanced Mode
 ------
@@ -31,13 +32,13 @@ In addition to the above advanced / basic toggle we have also added the option t
 To hide the template descriptions go to the settings panel and toggle the Hide Template description on.
 
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images//disable-descriptions.jpg" alt="image" />
+<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/disable-descriptions.jpg" alt="image" />
 
 ### This is an example of the css page with the information enabled.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images//with-descriptions.jpg" alt="image" />
+<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/with-descriptions.jpg" alt="image" />
 
 
 And as you can see from the following screenshot disabling the information significantly tightens up the display.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images//without-descriptions.jpg" alt="image" />
+<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/without-descriptions.jpg" alt="image" />

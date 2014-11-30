@@ -4,7 +4,7 @@ Troubleshooting
  
 Zen Grid Framework based themes have smart troubleshooting routines which can be found on the overview panel in the template settings. The warnings that can be found here provide further information for some common issues that can face some users.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images//troubleshooting.jpg" alt="image" />
+<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/troubleshooting.jpg" alt="image" />
 
 If you are having trouble with some of your settings then it's advised that you look at the Overview panel to get an idea regarding some of your settings that may be causing the issue.
 

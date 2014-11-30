@@ -72,7 +72,7 @@ Using development mode to load less files in the browser
 
 If you are working on a live server though and wish to work directly with less files there is a development mode found in the settings panel which can be enabled for this use.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images//less-live-watch.jpg" alt="image" />
+<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/less-live-watch.jpg" alt="image" />
 
 
 When development mode is enabled all less files loaded by the template are loaded in the browser. So rather than loading the css/theme.my-theme-name.css file you will see template.less, menu.less etc loading if you were to view the page with the wen inspector.
