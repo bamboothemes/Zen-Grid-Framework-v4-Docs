@@ -1,0 +1,2 @@
+Allowing pinch and zoom
+====
