@@ -1,2 +1,0 @@
-Controlling Module Widths
-====

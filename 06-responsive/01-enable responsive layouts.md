@@ -1,2 +1,0 @@
-Enabling Responsive Layout
-====
