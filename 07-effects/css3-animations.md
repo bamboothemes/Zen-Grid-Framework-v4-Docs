@@ -1,7 +1,7 @@
 CSS3 Animations
 ====
 	
-The CSS3 effects option adds animations to entire rows of modules in your template. The animation is triggered when the content becomes viewable on the page. If the content is viewable on page load then the animation is fired straight away whereas if the content is below the fold the animation is triggered as the user scrolls down and the content becomes viewable. 
+The CSS3 effects option adds css3 transitions to entire rows of modules in your template. The animation is triggered when the content becomes viewable on the page. If the content is viewable on page load then the animation is fired straight away whereas if the content is below the fold the animation is triggered as the user scrolls down and the content becomes viewable. 
 
 
 Animations are added to the entire row as seen in the screenshot below.
