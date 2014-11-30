@@ -43,7 +43,7 @@ Adding other files to the compiler
 ----
 It is also possible to include other less files in the template's compiler. These files will be compiled to css after clicking the compile less button and included in the theme's css file. To add files to the compiler go to the settings panel in the administrator and scroll down to the area marked "Add less files to compiler".
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/less-compiler.jpg" alt="image" />
+![Les Compiler](/zen-grid-framework-4/images/less-compiler.jpg")
 
 An example of using this option might be wanting to compile the zentools.less into your template's css file in order to reduce the number of css files loaded in the browser. Zentools is our responsive gallery module and has an option to disable the loading of css files.
 
@@ -55,7 +55,7 @@ Adding inline css to the head of your template
 
 Another option for adding custom or extra css to your theme is to add it directly to the custom scripts area in the settings panel.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/add-custom-scripts.jpg" alt="image" />
+![Add Custom Scripts](/zen-grid-framework-4/images/add-custom-scripts.jpg")
 
 Any text entered here is output directly on the page so you need to add the entire snippet you want to include, including the style tags as per the example below:
 

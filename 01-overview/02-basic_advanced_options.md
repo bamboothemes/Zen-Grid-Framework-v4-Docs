@@ -41,4 +41,4 @@ To hide the template descriptions go to the settings panel and toggle the Hide T
 
 And as you can see from the following screenshot disabling the information significantly tightens up the display.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/without-descriptions.jpg" alt="image" />
+![Basic Mode](/zen-grid-framework-4/images/display/without-descriptions.jpg)
