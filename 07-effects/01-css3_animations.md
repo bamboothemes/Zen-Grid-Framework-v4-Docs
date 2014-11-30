@@ -8,6 +8,10 @@ The CSS3 effects option adds css3 transitions to entire rows of modules in your 
 
 Animations are added to the entire row as seen in the screenshot below.
 
+### Select elements you want to include
+![Css3 transitions and animations](/zen-grid-framework-4/images/effects/css3-animations.jpg)
+ 
+
 
 Grid System and rows
 -----
