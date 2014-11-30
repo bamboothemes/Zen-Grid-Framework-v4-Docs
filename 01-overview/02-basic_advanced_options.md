@@ -16,7 +16,7 @@ Basic and advanced mode are toggled on specific panels with a Hide Advanced / Sh
 Users can click on the Advanced setting toggle while editing the template settings in order to hide or display.
 
 ### Example of layout settings with advanced options enabled.
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/advanced-mode.jpg" alt="image" />
+![Advanced Mode](/zen-grid-framework-4/images/display/advanced-mode.jpg)
 
 Advanced Mode
 ------
@@ -32,11 +32,11 @@ In addition to the above advanced / basic toggle we have also added the option t
 To hide the template descriptions go to the settings panel and toggle the Hide Template description on.
 
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/disable-descriptions.jpg" alt="image" />
+![Disable Descriptions](/zen-grid-framework-4/images/display/disable-descriptions.jpg)
 
 ### This is an example of the css page with the information enabled.
 
-<img src="http://docs.joomlabamboo.com/zen-grid-framework-4/images/with-descriptions.jpg" alt="image" />
+![Basic Mode](/zen-grid-framework-4/images/display/with-descriptions.jpg)
 
 
 And as you can see from the following screenshot disabling the information significantly tightens up the display.
