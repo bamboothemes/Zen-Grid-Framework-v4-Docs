@@ -10,6 +10,7 @@ v1.0.3
 - 
 
 v1.0.2
+----
 - Change to naming convention for template settings files.
 
 
