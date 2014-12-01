@@ -13,7 +13,8 @@ Our template change logs generally list the features, bug fixes and other change
 ## Most users should just use the installer
 For most users all that is required when a new template is released is to install the update via the Joomla template manager. Any themes, custom.css files or custom.less files, layouts or theme presets you have create will be unaffected by the update.
 
-## Other users may need to install the package manually. This is especially the case if changes have been made to the layout files or any other files that are included in the zip file that we distribute.
+## Other users may need to install the package manually. 
+This is especially the case if changes have been made to the layout files or any other files that are included in the zip file that we distribute.
 
 An example of this may be where the user has added custom html code to one of the tpls/blocks/ files. If changes have been made to these files then they will be overwritten using the installer.
 
