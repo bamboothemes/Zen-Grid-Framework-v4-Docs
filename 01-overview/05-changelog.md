@@ -7,7 +7,7 @@ This is the changelog for the Zen Grid Framework v4. The framework is a folder o
 v1.0.3
 ----
 - Adds support for custom fonts
-- 
+- Fix double quotes added to inputs
 
 v1.0.2
 ----
