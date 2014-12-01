@@ -34,3 +34,14 @@ The file structure of a ZGFv4 based theme is typically as follow:
 	- default.php the main layout container
 	- blocks/ (sub layout files that are included by the parent)
 - zen (holds the ZGF4 files)
+
+
+Zen framework file structure
+----
+- admin (css, fonts and js for admin)
+- config (main config file that renders the fields)
+- fields (various displays for parameter types)
+- helpers (ajax helpers for framework functionality)
+- libs (bootstrap, font awesome, zen less, mobile detect, less php, lessjs and more.)
+- zen.php (the main zen class)
+- zen.xml (holds release and version data)
