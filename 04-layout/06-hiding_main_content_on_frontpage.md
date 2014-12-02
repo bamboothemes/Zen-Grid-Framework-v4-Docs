@@ -7,7 +7,7 @@ This option is aimed at creating a frontpage that only uses content generated fr
 
 Enable the hide front page option
 ----
-![Hide Main content](../../images/layout/hide-main-content.jpg)
+![Hide Main content](../images/layout/hide-main-content.jpg)
 
 
 
