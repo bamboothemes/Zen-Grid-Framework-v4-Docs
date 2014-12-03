@@ -1,4 +1,4 @@
-Administrator Settings
+Template settings display
 ====
 
 ### Template settings
