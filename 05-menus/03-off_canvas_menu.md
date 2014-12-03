@@ -9,4 +9,10 @@ The Offcanvas panel can be initiated in two different ways in ZGF4 themes.
 
 ### Offcanvas menu settings
 ![Offcanvas Menu Settings](/zen-grid-framework-4/images/menu/offcanvas.jpg)
-  
+ 
+
+#### Offcanvas position
+This setting determines the side of the page that the offcanvas panel is displayed on. 
+
+#### Minimum width visible
+This setting determines the minimum width that the viewer should be able to view the menu at.
