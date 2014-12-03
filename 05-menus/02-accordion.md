@@ -24,3 +24,8 @@ This option ensures that the first item in the accordion menu is always open.
 
 #### Always show active menu item
 This options ensures that the active menu item is visible on the page when the page loads.
+
+
+Accordion is also used for the off canvas collapse menu
+----
+Please note that the accordion menu is also used if the offcanvas menu is used in the nav collapse setting. (see under the responsive panel in the template settings). This menu is enabled regardless of the enable accordion setting discussed above.
