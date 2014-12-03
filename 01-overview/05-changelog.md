@@ -5,18 +5,18 @@ This is the changelog for the Zen Grid Framework v4. The framework is a folder o
 
 v1.0.5
 ----
-Adds clearing for tab-content
-Fix typo for load settings
-Change the display for style overview
-Compile button change
-Adds versioning to assets to avoid cache
-Improved save routine
-Admin improvements
-Fix save and close not closing
-Fix bs3 incompatibility with inputs
-Fix message box not re-appearing when load settings
-Improved language for template.css enabled. 
-Devmode and template.css warnings are now dynamic.
+- Adds clearing for tab-content
+- Fix typo for load settings
+- Change the display for style overview
+- Compile button change
+- Adds versioning to assets to avoid cache
+- Improved save routine
+- Admin improvements
+- Fix save and close not closing
+- Fix bs3 incompatibility with inputs
+- Fix message box not re-appearing when load settings
+- Improved language for template.css enabled. 
+- Devmode and template.css warnings are now dynamic.
 
 
 v1.0.4
