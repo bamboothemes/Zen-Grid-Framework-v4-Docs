@@ -25,16 +25,16 @@ Each Zen Grid Framework v4 (ZGF4) theme is divided into a number of different ro
 
 One page menu links correspond to the following rows of modules:
 
-Home - top, header, menu
-Banner - banner
-Grid1 - Grid1 to Grid4
-Grid2 - Grid5 to Grid8
-Grid3 - Grid9 to Grid12
-Main - Main content area
-Grid4 - Grid13 to Grid16
-Grid5 - Grid17 to Grid20
-Grid6 - Grid21 to Grid24
-Bottom - Bottom 1-6 and Footer
+- Home - top, header, menu
+- Banner - banner
+- Grid1 - Grid1 to Grid4
+- Grid2 - Grid5 to Grid8
+- Grid3 - Grid9 to Grid12
+- Main - Main content area
+- Grid4 - Grid13 to Grid16
+- Grid5 - Grid17 to Grid20
+- Grid6 - Grid21 to Grid24
+- Bottom - Bottom 1-6 and Footer
 
 
 As an example, to have a menu that links to the banner, grid-block-1, grid-block-4 and bottom modules you would need to:
@@ -50,7 +50,3 @@ As well as ensure that the banner, grid1, grid4 and bottom menu items had titles
 ### Onepage menu settings
 ![Onepage Menu Settings](/zen-grid-framework-4/images/menu/onepage.jpg)
 
-
-Use multiple one page menu styles
-----
-  
