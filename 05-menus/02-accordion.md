@@ -13,3 +13,14 @@ The accordion comes with two options:
 ### Accordion settings
 ![General Layout](/zen-grid-framework-4/images/menu/accordion.jpg)
   
+
+#### Enable accordion
+This option needs to be enabled in order to enable the accordion behaviour.
+
+When enabled the required code is output in the tpls/blocks/script.php file.
+
+#### Always open first item
+This option ensures that the first item in the accordion menu is always open.
+
+#### Always show active menu item
+This options ensures that the active menu item is visible on the page when the page loads.
