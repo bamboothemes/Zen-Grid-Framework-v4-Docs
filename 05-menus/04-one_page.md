@@ -37,6 +37,15 @@ Grid6 - Grid21 to Grid24
 Bottom - Bottom 1-6 and Footer
 
 
+As an example, to have a menu that links to the banner, grid-block-1, grid-block-4 and bottom modules you would need to:
+
+Publish a module to
+- banner
+- grid1, grid2, grid3 or grid4
+- grid13,grid14, grid16 or grid16
+- bottom1, bottom2, bottom3, bottom4, bottom5 or bottom6.
+
+As well as ensure that the banner, grid1, grid4 and bottom menu items had titles in the template settings as per the screenshot below.
 
 ### Onepage menu settings
 ![Onepage Menu Settings](/zen-grid-framework-4/images/menu/onepage.jpg)
