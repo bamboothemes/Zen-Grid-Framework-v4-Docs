@@ -1,2 +1,2 @@
-Controlling Module Widths
+How to control module widths
 ====

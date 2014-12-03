@@ -1,2 +1,2 @@
-Saving Layout Presets
+How to save a layout preset
 ====

@@ -1,4 +1,4 @@
-Accordion
+Accordion Settings
 ====
 
 ### Accordion settings

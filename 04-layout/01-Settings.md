@@ -1,4 +1,4 @@
-Font Settings
+Layout Settings
 ====
 
 
