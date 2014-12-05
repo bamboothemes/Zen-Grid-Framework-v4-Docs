@@ -63,6 +63,7 @@ How to create a new theme in ZGF4 templates
 
 ![Compile to less](/zen-grid-framework-4/images/save-theme/compile-to-less.png)
 
+If you follow the steps above your new theme will be created and available for other template styles. If you wish to apply this theme to your current template style you would then need to click save in the top toolbar.
 
 How to create a new layout in ZGF4 templates
 ----
