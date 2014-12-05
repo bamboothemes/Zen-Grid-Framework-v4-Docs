@@ -9,9 +9,9 @@ Saving and compiling changes in your templates will normally only take a few sec
 
 Some of the messages include
 ----
-![Save Success](/zen-grid-framework-4/images/save-theme/save-success.png)
-![Compile Less](/zen-grid-framework-4/images/save-theme/compiling-less.png)
-![Less has been compiled](/zen-grid-framework-4/images/save-theme/less-success.png)
+![Save Success](/zen-grid-framework-4/images/save-theme/save-success.jpg)
+![Compile Less](/zen-grid-framework-4/images/save-theme/compiling-less.jpg)
+![Less has been compiled](/zen-grid-framework-4/images/save-theme/less-success.jpg)
 
 
 When is compiling less to css required?
@@ -25,7 +25,7 @@ That is if you change the width, primary colour, dropdown width then less will b
 Compiling less to css without saving settings
 ----
 
-![Compile Less](/zen-grid-framework-4/images/load-settings/choose-a-style.png)
+![Compile Less](/zen-grid-framework-4/images/load-settings/compile-less-button.png)
 
 If you need to compile less to css without saving your settings you can do so by clicking the compile less button found in the settings > css panel. It's advised that you use the save button at the top of the page to save and compile however if you need to trigger the compilation of less manually this is how to do it.
 
