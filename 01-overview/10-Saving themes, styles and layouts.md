@@ -3,15 +3,15 @@ Saving themes, styles and layouts in Zen Grid Framework v4
 
 Zen Grid Framework v4 templates have an intelligent template settings panel that performs a number of different actions when the save button is clicked. The action that is performed depends on any changes that you have made to your template settings.
 
-![Compile Less](/zen-grid-framework-4/images/save-theme/compiling-less.png)
-
 Clicking the "save" and "save and close" button performs the standard Joomla functions when this button is clicked, however before those processes are run, the template settings are saved to the corresponding settings file and if it is required, less is compiled to css. While these actions are occurring a blue message box appears at the top of the page indicating the stage of the save process you are currently at.
-
-![Save Success](/zen-grid-framework-4/images/save-theme/save-success.png)
 
 Saving and compiling changes in your templates will normally only take a few seconds and most of the time under 10.
 
-![Less has been compiled](/zen-grid-framework-4/images/save-theme/less-has-been-compiled.png)
+Some of the messages include
+----
+![Save Success](/zen-grid-framework-4/images/save-theme/save-success.png)
+![Compile Less](/zen-grid-framework-4/images/save-theme/compiling-less.png)
+![Less has been compiled](/zen-grid-framework-4/images/save-theme/less-success.png)
 
 
 When is compiling less to css required?
