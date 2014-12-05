@@ -3,6 +3,15 @@ Changelog
 
 This is the changelog for the Zen Grid Framework v4. The framework is a folder of files that are included in each ZGFv4 based theme. When a theme is updated the framework is automatically updated. The changelog below is a record of changes made to the framework.
 
+v1.0.6
+----
+Appends version number to admin assets via a variable
+Fix disappearing module rows in layout tool if only one item left in row
+Optimised save routine
+Change language for default style for load settings dropdown
+fix menu assignment not getting saved
+
+
 v1.0.5
 ----
 - Adds clearing for tab-content
