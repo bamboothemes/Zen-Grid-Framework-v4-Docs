@@ -13,7 +13,7 @@ How to apply a saved style
 
 ![Choose a style](/zen-grid-framework-4/images/load-settings/choose-a-style.png)
 
-### Click the load setting button
+### Click the "Load saved settings" button
 ![Click the button](/zen-grid-framework-4/images/load-settings/click-load-saved-settings.png)
 
 ### You should see a success message
