@@ -18,8 +18,6 @@ When is compiling less to css required?
 ---
 Less is automatically compiled to css on saving your settings when any changes to the template settings have been made that affect the display of the template and those settings are found in the template's css file.
 
-![Settings that trigger compile](/zen-grid-framework-4/images/load-settings/choose-a-style.png)
-
 That is if you change the width, primary colour, dropdown width then less will be compiled to css when hitting save.
 
 
