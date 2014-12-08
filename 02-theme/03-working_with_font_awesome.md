@@ -20,7 +20,7 @@ Font Awesome is required for the Zen Shortcode plugin
 The Zen shortcode plugin makes it possible to use shortform snippets to render font icons as well as other types of displays and styling.
 
 If you intend to use the Zen Shortcode plugin to render icons then you will either need to:
-- set this option to at least the minimumum level if only using a small selection of icons
+- set this option to at least the minimum level if only using a small selection of icons
 - set this option to full library to include all of the icons. 
 - set this option to none and include the font awesome library via the shortcode plugin settings. 
   

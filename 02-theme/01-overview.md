@@ -9,7 +9,7 @@ Themes are built using less files to generate .css files that are ultimately loa
 
 The theme variables are stored in json files in the settings/themes folder. The variables populate the administrator panel when a theme is loaded and are then passed to the less compiler when you press the compile less button or save your theme in the theme panel.
 
-In order to save any changes to your theme via the template administrator it is necessary to compile less to css. When any chnage is made to a setting that requires the recompiling of your less files the compile less and save theme buttons turn red. Any changes made to these settings that require compilation will not show until you compile less to css.
+In order to save any changes to your theme via the template administrator it is necessary to compile less to css. When any change is made to a setting that requires the recompiling of your less files the compile less and save theme buttons turn red. Any changes made to these settings that require compilation will not show until you compile less to css.
 
 Working directly with less files
 ----
@@ -37,7 +37,7 @@ Files that can be added to template.less file if not using the template interfac
 	
 The font awesome all and min less files are two instances of the font awesome library. The font-awesome-min.less requires the minimum number of icons required for the theme whereas the all file includes the entire library.
 
-Please note that it may be necessary to overwrite the bootstrap less files in this case as they are generated dynamically based on the theme settings int he template administrator.
+Please note that it may be necessary to overwrite the bootstrap less files in this case as they are generated dynamically based on the theme settings in the template administrator.
 
 In your less/template.less file you should find syntax similar to the following:
 
