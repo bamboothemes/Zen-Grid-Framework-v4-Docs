@@ -14,7 +14,7 @@ There are three basic options for including Font Awesome with your theme.
 - Minimum
 - Full Library
 
-Dependancy for Zen Shortcode plugin
+Font Awesome is required for the Zen Shortcode plugin
 ----
 
 The Zen shortcode plugin makes it possible to use shortform snippets to render font icons as well as other types of displays and styling.
@@ -22,11 +22,16 @@ The Zen shortcode plugin makes it possible to use shortform snippets to render f
 If you intend to use the Zen Shortcode plugin to render icons then you will either need to:
 - set this option to at least the minimumum level if only using a small selection of icons
 - set this option to full library to include all of the icons. 
-- set this option to none and include the font awesome library via the shortcode plugin settings. The Zen Shortcode plugin makes it possible to load the Font Awesome library via a local file, via the Font Awesome CDN as well as specify a custom name space for the font prefix.
+- set this option to none and include the font awesome library via the shortcode plugin settings. 
+  
+The Zen Shortcode plugin makes it possible to load the Font Awesome library via a local file, via the Font Awesome CDN and as well as specify a custom name space for the font prefix.
 
-Please note that if you are using font icons from other components that use the default fa- prefix then you will need to:
+How to include Font Awesome library when using 3rd party components
+---
+If you are using a 3rd party component that requires the Font Awesome library that uses the default name space (fa) then you will need to do the following:
 - Set the Font Awesome option in the template to none.
-- Enable the Font Awesome settings int he Zen Shortcode plugin. Ensure the prefix for the icons is fa-.
+- Enable the Font Awesome settings in the Zen Shortcode plugin. 
+- Ensure the prefix for the icons is fa-.
 
 
 Understanding Font Awesome template options
