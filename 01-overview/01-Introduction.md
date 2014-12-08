@@ -7,7 +7,7 @@ ZGFv4 is a collection of files located in the zen folder of all zgfv4 based them
 
 The framework itself is automatically added to each template release and is not packaged as an extra plugin or zip to install.
 
-We did this in order to reduce the complexity for end users maintaining their site as well as an attempt to reduce the overhead and performance of the theme.
+We did this in order to reduce the complexity for end users maintaining their site as well as an attempt to reduce the overhead and improve performance of the theme.
 
-Most of the theme's functionality is compiled and compressed in the template admin rather than at run time. This leads to a faster experience for your end uses because there are very few front end server side processes that run when a page loads. 
+Most of the theme's functionality is compiled and compressed in the template admin rather than at run time. This leads to a faster experience for your end users because there are very few front end server side processes that run when a page loads. 
 
