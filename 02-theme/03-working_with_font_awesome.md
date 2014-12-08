@@ -17,7 +17,7 @@ There are three basic options for including Font Awesome with your theme.
 Dependancy for Zen Shortcode plugin
 ----
 
-If you intended to use the Zen Shortcode plugin to render icons then you will either need to set this option to at least the minimumum level and most likely the full level, or include the font awesome library via the plugin settings. The Zen Shortcode plugin makes it possible to load the Font Awesome library via a local file or via the Font Awesome CDN.
+If you intended to use the Zen Shortcode plugin to render icons then you will either need to set this option to at least the minimum level and most likely the full level, or include the font awesome library via the plugin settings. The Zen Shortcode plugin makes it possible to load the Font Awesome library via a local file or via the Font Awesome CDN.
 
 Do not include
 ----

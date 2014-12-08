@@ -13,7 +13,7 @@ Enable the hide front page option
 
 Sometimes your content is hidden on pages other than the front page
 ----
-Joomla uses an id based system for determining which modules to display on the page. THe id is derived form the site's menu structure and when there is no menu item for a particular view the setup for the front page view is displayed.
+Joomla uses an id based system for determining which modules to display on the page. The id is derived form the site's menu structure and when there is no menu item for a particular view the setup for the front page view is displayed.
 
 If you have the hide main content option enabled it is highly likely that your content will be hidden from view. To fix this you simply need to create a menu item that points to the content you wish to display - blog category, search component etc.
 

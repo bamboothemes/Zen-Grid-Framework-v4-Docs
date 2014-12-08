@@ -17,7 +17,7 @@ Using less language syntax allows us to use variables to specify breakpoints val
 
 Using variables for breakpoints allows us to control the way that the design works at specific browser widths rather than using fixed values that target specific devices.
 
-The language used in the theme settings for breakpoints refer to device types however these are meant be be more of a guide rather than specifically related to the device type specified.
+The language used in the theme settings for breakpoints refer to device types however these are meant be more of a guide rather than specifically related to the device type specified.
 
 ### Breakpoint Settings
 ![Breakpoint Settings](/zen-grid-framework-4/images/responsive/breakpoints.jpg)
@@ -45,13 +45,17 @@ If not using the Mobile Detect option the markup for the slideshow is hidden fro
 
 On the other hand if the Mobile Detect is enabled and the user is using a tablet or phone device the entire markup for the banner block will not load. This means that the slideshow and it's assets are not loaded at all and the user is able to download your page making significant savings in terms of bandwidth and page load speed.
 
-Mobile Detect will only target mobile devices so on the desktop the markup  loads regardless of the screensize. When the user resizes the browser above the breakpoint specified then the slideshow ill be visible.
+Mobile Detect will only target mobile devices so on the desktop the markup loads regardless of the screensize. When the user resizes the browser above the breakpoint specified then the slideshow will be visible.
 
 > Developers please note that while the Mobile Detect library when enabled targets the entire page - eg you cant target a specific row of modules with the mobile detect rules via the template settings you can use the mobile detect classes in the template markup.
 
 If you wish to use mobile detect rules in the template files use the following syntax in the tpls/blocks files:
 
 	$this->is_tablet or $this->is_mobile
+    
+To hide a full block within a layout file, eg /tpls/mylayout.php use:
+
+	$zen->is_tablet or $zen->is_mobile
 
 Specifying breakpoints
 ----
