@@ -14,7 +14,7 @@ The file can be downloaded via this link - <a href="http://joomlabamboo.com/inde
 
 Publish the plugin
 ----
-The plugin is not publish by default after installation so you will need to publish the plugin via the extension manager. Navigate to the the extensions > plugin manager and type "zen" into the search box. The Zen Menu plugin should appear int he filtered list. 
+The plugin is not publish by default after installation so you will need to publish the plugin via the extension manager. Navigate to the the extensions > plugin manager and type "zen" into the search box. The Zen Menu plugin should appear in the filtered list. 
 
 ![Publish Zen Menu](/zen-grid-framework-4/images/menu/enable_zenmenu.png)
   
@@ -67,4 +67,4 @@ This setting displays any child items in a full width menu that spans the entire
 This setting can only be applied to parent items.
 
 ### Select a module
-This setting adds a module to the menu item. The module is selected by name int he dropdown list and is then displayed below the menu title of the item the module is being assigned to.
+This setting adds a module to the menu item. The module is selected by name in the dropdown list and is then displayed below the menu title of the item the module is being assigned to.

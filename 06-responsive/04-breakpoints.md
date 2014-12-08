@@ -17,7 +17,7 @@ Using less language syntax allows us to use variables to specify breakpoints val
 
 Using variables for breakpoints allows us to control the way that the design works at specific browser widths rather than using fixed values that target specific devices.
 
-The language used in the theme settings for breakpoints refer to device types however these are meant be be more of a guide rather than specifically related to the device type specified.
+The language used in the theme settings for breakpoints refer to device types however these are meant be more of a guide rather than specifically related to the device type specified.
 
 ### Breakpoint Settings
 ![Breakpoint Settings](/zen-grid-framework-4/images/responsive/breakpoints.jpg)
