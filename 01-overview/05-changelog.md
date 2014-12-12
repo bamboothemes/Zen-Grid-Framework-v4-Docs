@@ -3,6 +3,13 @@ Changelog
 
 This is the changelog for the Zen Grid Framework v4. The framework is a folder of files that are included in each ZGFv4 based theme. When a theme is updated the framework is automatically updated. The changelog below is a record of changes made to the framework.
 
+v1.0.7 
+---
+Renamed zen folder to zengrid to avoid Site Ground reserved name issue
+Appends current time to json file to avoid cache
+Sets post rather than get for posting Theme data
+
+
 v1.0.6
 ----
 Appends version number to admin assets via a variable
