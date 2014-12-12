@@ -5,18 +5,18 @@ This is the changelog for the Zen Grid Framework v4. The framework is a folder o
 
 v1.0.7 
 ---
-Renamed zen folder to zengrid to avoid Site Ground reserved name issue
-Appends current time to json file to avoid cache
-Sets post rather than get for posting Theme data
+- Renamed zen folder to zengrid to avoid Site Ground reserved name issue
+- Appends current time to json file to avoid cache
+- Sets post rather than get for posting Theme data
 
 
 v1.0.6
 ----
-Appends version number to admin assets via a variable
-Fix disappearing module rows in layout tool if only one item left in row
-Optimised save routine
-Change language for default style for load settings dropdown
-fix menu assignment not getting saved
+- Appends version number to admin assets via a variable
+- Fix disappearing module rows in layout tool if only one item left in row
+- Optimised save routine
+- Change language for default style for load settings dropdown
+- fix menu assignment not getting saved
 
 
 v1.0.5
