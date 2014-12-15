@@ -3,6 +3,11 @@ Changelog
 
 This is the changelog for the Zen Grid Framework v4. The framework is a folder of files that are included in each ZGFv4 based theme. When a theme is updated the framework is automatically updated. The changelog below is a record of changes made to the framework.
 
+v1.0.8
+---
+- Fix pencil not showing for jmodedit icon. 
+- Fix Base Font compile issue. 
+
 v1.0.7 
 ---
 - Renamed zen folder to zengrid to avoid Site Ground reserved name issue
