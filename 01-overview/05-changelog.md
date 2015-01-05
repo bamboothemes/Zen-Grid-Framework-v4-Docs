@@ -3,6 +3,28 @@ Changelog
 
 This is the changelog for the Zen Grid Framework v4. The framework is a folder of files that are included in each ZGFv4 based theme. When a theme is updated the framework is automatically updated. The changelog below is a record of changes made to the framework.
 
+v1.1.0
+----
+- Adds new folder layout field for upcoming Focus2 template
+- Remove padding and margin on footer .zen-container to compensate for footer now displayed as a spotlight
+- Prevent custom asset function outputting empty script tags
+- Adds min-height variable to select boxes
+- Adds subheading field for settings
+- Adds folder icon for modal screens
+- Rename default config and default theme files to settings/default-config.json and settings/default-theme.json
+- Fix offcanvas visible on all screens
+- Move btn mixin out of framework
+- Adds file and folder libs to main zen class
+- Adds Joomla language to body class
+- Adds onepage menu to body class
+- Adds no change option to layout tool to prevent collapsing of modules at breakpoints
+- Adds container, tablet max width variables for the container
+- Fix undefined variables when loading new layouts
+- Prevent warnings when copying a template
+- Replace preset folder name when loading new settings
+- Fix z-index on menu 
+- Fix border-color for inputs
+
 v1.0.8
 ---
 - Fix pencil not showing for jmodedit icon. 
