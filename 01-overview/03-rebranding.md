@@ -1,10 +1,4 @@
-Rebranding your template
+Rebranding your template / Adding copyright
 ======
- 
- Joomlabamboo themes come with our logo on the bottom right hand corner of the page by default.
- 
-This logo can be removed in the overview panel in the template settings.
 
-![Template Rebranding](/zen-grid-framework-4/images/rebranding.jpg)
-
-In addition to removing the Joomlabamboo logo, this is where you can specify your own custom copyright information to be displayed on the site. The copyright information is placed in the bottom right corner of the page next to or underneath the footer module position.
+In v1.1 Zen Grid Framework v4 themes the copyright position is available as a module position. The template no longer control the output of the copyright message. Any relevant copyright message must bow be added to a custom html module called copyright. 
