@@ -1,7 +1,7 @@
 Using ZGFv4 themes with Admintools pro
 ======
 
-<a href="https://www.akeebabackup.com/products/admin-tools.html">Admintools Pro</a> is a very useful tool for managing and protecting your Joomla website. The pro version of Admintools contains a number of security features that can block some of the functioning required by your template.
+<a href="https://www.akeebabackup.com/products/admin-tools.html">Admintools Pro</a> is a very useful tool for managing and protecting your Joomla website. The pro version of Admintools contains a number of security features that can block some of the functionality required by your template.
 
 The functions that are blocked by Admintools pro are:
 - Reading template json files in the template admin
