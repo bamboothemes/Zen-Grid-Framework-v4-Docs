@@ -11,7 +11,7 @@ The functions that are blocked by Admintools pro are:
 Using Admintools while developing your site
 ---
 
-In most cases it wont be necessary to use these advanced security features while developing your site. and as such it is suggested to install Admintools after you have finished developing your site and before you launch your site.
+In most cases it wont be necessary to use these advanced security features while developing your site and as such it is suggested to install Admintools after you have finished developing your site and before you launch your site.
 
 However if you have a live public facing site that requires advanced security protocols during development then following the instructions below will allow you to be able to develop the site and use the the advanced security options in Admintools pro.
 
