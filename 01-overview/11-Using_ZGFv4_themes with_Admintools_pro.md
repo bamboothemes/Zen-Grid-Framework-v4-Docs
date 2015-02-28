@@ -28,11 +28,11 @@ Configure the Web Application Firewall
 These settings offer protection against front end users being able to manipulate your template on the front end of your site. It is used in the template to allow access to the json files which store configuration data as well as access to the various ajax functionality used in the template.
 
 In order to allow access to this template functionality you need to "Allow access to the template=your_template_name" parameter in the Web Application fire Wall settings. <br /><br />
-a. To access these settings navigate to Admintools in your Joomla admin via components > admintools. 
-b. Click on the Web Application Firewall options.
-c. Click on the Configure WAF button.
-d. Navigate to the Visual fingerprinting protection tab.
-e. Set the Block tmpl=foo system template switch to no.
-f. Set the Block template=foo site template switch to no.
+- To access these settings navigate to Admintools in your Joomla admin via components > admintools. 
+- Click on the Web Application Firewall options.
+- Click on the Configure WAF button.
+- Navigate to the Visual fingerprinting protection tab.
+- Set the Block tmpl=foo system template switch to no.
+- Set the Block template=foo site template switch to no.
 
 Adding these exceptions in the Admintools pro options should allow your template to function correctly.
