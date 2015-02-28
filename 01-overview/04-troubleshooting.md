@@ -10,6 +10,10 @@ If you are having trouble with some of your settings then it's advised that you 
 
 A description of the possible warnings follow below. 
 
+Admintools pro installed
+--------
+This warning gives instructions on how to allow the template to compile less to css and access saved settings if you have the <a href="https://www.akeebabackup.com/products/admin-tools.html">Admintools Pro</a> component installed. For further instructions please review the using Zen Grid Framework v4 themes with Admintools Pro page.
+
 Compile required
 --------
 Before you saved your theme settings you made some changes that will not display on the front end of your site unless you compile less to css. Click the compile less button in the toolbar to save your changes to the theme's css files.
