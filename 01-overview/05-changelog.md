@@ -3,6 +3,35 @@ Changelog
 
 This is the changelog for the Zen Grid Framework v4. The framework is a folder of files that are included in each ZGFv4 based theme. When a theme is updated the framework is automatically updated. The changelog below is a record of changes made to the framework.
 
+v1.3.1
+---
+Change module chrome for modules in menu to zendefault
+Fixes fonts not loading if using subset.
+Fix link to zgf4 page
+Adds glyph icons to bootstrap2 options
+Carets now use default link colour
+Fix double slash in assets files
+
+
+v1.3.0
+---
+
+New Features
+----
+- Add less maps and improve compiler
+- Adds new social icons fields
+
+Improvements
+----
+Add max-width to iframe
+Fix clearfix mixin
+Add backstretch to library files
+Adds @path variable for compiler
+Updates social icons to also include envelope, user and search icon classes
+Adds notice if user is using admintools pro
+Adds a safety if user adds none as css field in colour chooser
+
+
 v1.2.1
 ---
 Fix for Joomla 3.4 compatibility
