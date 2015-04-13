@@ -48,54 +48,21 @@ The syntax shown below is automatically changed in your content items to render 
 <h2>New syntax</h2>
 For users that are used to using the JB Type plugin please note that the syntax used for rendering grids in your content has changed. Each row needs to be wrapped in a specific zen-row tag. This is used in order to avoid needing to add the _last tag used in the JB Type plugin.
 <strong>Example: (Change square brackets to curly brackets in example below.)</strong>
-<code>{zen-row}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-row}</code>
- 
+
+	{zen-row}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-row}
+	 
 <strong>List of available grids:</strong>
-<ul class="simple">
-<li>zen-1</li>
-<li>zen-2</li>
-<li>zen-3</li>
-<li>zen-4</li>
-<li>zen-5</li>
-<li>zen-6</li>
-<li>zen-7</li>
-<li>zen-8</li>
-<li>zen-9</li>
-<li>zen-10</li>
-<li>zen-11</li>
-<li>zen-12</li>
-</ul>
-Here are examples:
-{zen-row}{zen-12}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-12</div>
-{/zen-12}{/zen-row}{zen-row}{zen-6}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-6</div>
-{/zen-6}{zen-6}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-6</div>
-{/zen-6}{/zen-row}{zen-row}{zen-4}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-4</div>
-{/zen-4}{zen-4}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-4</div>
-{/zen-4}{zen-4}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-4</div>
-{/zen-4}{/zen-row}{zen-row}{zen-3}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-3</div>
-{/zen-3}{zen-3}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-3</div>
-{/zen-3}{zen-3}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-3</div>
-{/zen-3}{zen-3}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-3</div>
-{/zen-3}{/zen-row}{zen-row}{zen-2}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-2</div>
-{/zen-2}{zen-2}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-2</div>
-{/zen-2}{zen-2}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-2</div>
-{/zen-2}{zen-2}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-2</div>
-{/zen-2}{zen-2}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-2</div>
-{/zen-2}{zen-2}
-<div style="background-color: #eee; width: 100%; margin-bottom: 10px;">zen-2</div>
-{/zen-2}{/zen-row}
+
+- zen-1
+- zen-2
+- zen-3
+- zen-4
+- zen-5
+- zen-6
+- zen-7
+- zen-8
+- zen-9
+- zen-10
+- zen-11
+- zen-12
+
