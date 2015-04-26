@@ -60,21 +60,29 @@ In addition to adding specific custom icon syntax you can also add your own cust
 
 ### Using Zen Shortcode plugin to create grid based layouts
 
-Zen Shortcode is a plugin that can render specific icons, styling and layout markup in your content items.
-The syntax shown below is automatically changed in your content items to render the specific markup for grids based on the grid used in the Zen Grid Framework v4. 
+In addition to being able to render buttons, icons and other styled blocks of content, Zen Shortcodes is able to render complex grid based layouts inside your Joomla content.
 
- 
-## New syntax
+The grid used by the Zen Shortcode plugin uses the grid built into all Zen Grid Framework v4 based themes. Like most css based grids, the grid uses a 12 column grid to divide the space along an entire row of content. In order to create a row of content that is divided into multiple blocks the code blocks must not add up to more than 12 columns. 
+ 
+
+## Example grid
+The following code will render two blocks of text that fill approximately 50% of the width of the parent container
+
+	{zen-row}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-row}
+	
+
+## A 3 column grid
+The following code will render 3 blocks of content that take up 5, 2 and 5 columns respectively.
+
+	{zen-row}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{zen-2}This is a block of content that will take up 1/6 (or 2 columns) of the width of the page.{/zen-2}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{zen-row}
+
+Please note: Each row of content needs to be wrapped in a block of zen-row tags. The zen-row tags render the required .zen-row classes which enable the use of multiple rows of content in your items.
+
+## A note for users who used this functionality in the JB Type plugin.
 
 For users that are used to using the JB Type plugin please note that the syntax used for rendering grids in your content has changed. Each row needs to be wrapped in a specific zen-row tag. This is used in order to avoid needing to add the _last tag used in the JB Type plugin.
 
-
-### Example
-
-
-	{zen-row}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-row}
-	 
-### List of available grids
+## List of available grids
 
 - zen-1
 - zen-2
@@ -89,3 +97,6 @@ For users that are used to using the JB Type plugin please note that the syntax 
 - zen-11
 - zen-12
 
+## Syntax used to render a grid.
+
+	{zen-row}{zen-6}{/zen-6}{/zen-row}
