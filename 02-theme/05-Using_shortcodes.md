@@ -74,9 +74,17 @@ The following code will render two blocks of text that fill approximately 50% of
 ## A 3 column grid
 The following code will render 3 blocks of content that take up 5, 2 and 5 columns respectively.
 
-	{zen-row}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{zen-2}This is a block of content that will take up 1/6 (or 2 columns) of the width of the page.{/zen-2}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{zen-row}
+	{zen-row}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{zen-2}This is a block of content that will take up 1/6 (or 2 columns) of the width of the page.{/zen-2}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{/zen-row}
 
 Please note: Each row of content needs to be wrapped in a block of zen-row tags. The zen-row tags render the required .zen-row classes which enable the use of multiple rows of content in your items.
+
+## Creating empty columns in your grid
+In order to create an empty column in your row of content, it is necessary to add a non-breaking space to the empty grid. The [code]&nbsp;[/code] entity forces the grid to expand to it's full width and without it  the grid will simply collapse.
+
+An example of this can be seen below:
+
+	{zen-row}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{zen-2}&nbsp;{/zen-2}{zen-5}This is a block of content that will take up 5/12 (or 5 columns) of the width of the page.{/zen-5}{/zen-row}
+
 
 ## A note for users who used this functionality in the JB Type plugin.
 
