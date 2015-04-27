@@ -1,7 +1,7 @@
 Viewing custom font selection in JCE's front end editor
 ====
 
-<a href="https://www.joomlacontenteditor.net/JCE"</a> is one of the most popular wysiwyg editors for Joomla. It provides a robust and versatile solution for working with your Joomla content.
+<a href="https://www.joomlacontenteditor.net/">JCE</a> is one of the most popular wysiwyg editors for Joomla. It provides a robust and versatile solution for working with your Joomla content.
 
 By default JCE is set to load your template's css/template.css file. However if you are using custom fonts, and particular google fonts they will not be displayed in the editor.
 
