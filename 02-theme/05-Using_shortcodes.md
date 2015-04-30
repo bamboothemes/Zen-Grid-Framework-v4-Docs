@@ -68,7 +68,7 @@ The grid used by the Zen Shortcode plugin uses the grid built into all Zen Grid 
 ## Example grid
 The following code will render two blocks of text that fill approximately 50% of the width of the parent container
 
-	{zen-row}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-row}
+<pre>{zen-row}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-6}This is a block of content that will take up half of the width of the page.{/zen-6}{zen-row}</pre>
 	
 
 ## A 3 column grid
