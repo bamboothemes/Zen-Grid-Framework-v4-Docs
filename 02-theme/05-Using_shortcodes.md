@@ -118,6 +118,6 @@ To remove the html markup simply go to the menu for that item in your menu manag
 3. Add your Browser page title without the shortcode syntax
 4. Press save.
 
-This will ensure that your browser page title does not contain any html.
+This will ensure that your browser page title does not contain any html. 
 
 
