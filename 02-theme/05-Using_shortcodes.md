@@ -62,8 +62,10 @@ In addition to adding specific custom icon syntax you can also add your own cust
 
 In addition to being able to render buttons, icons and other styled blocks of content, Zen Shortcodes is able to render complex grid based layouts inside your Joomla content.
 
-The grid used by the Zen Shortcode plugin uses the grid built into all Zen Grid Framework v4 based themes. Like most css based grids, the grid uses a 12 column grid to divide the space along an entire row of content. In order to create a row of content that is divided into multiple blocks the code blocks must not add up to more than 12 columns. 
- 
+The grid used by the Zen Shortcode plugin uses the grid built into all Zen Grid Framework v4 based themes. Like most css based grids, the grid uses a 12 column grid to divide the space along an entire row of content. In order to create a row of content that is divided into multiple blocks the code blocks must not add up to more than 12 columns. Each time your block count reaches 12 you need to end that row and then create a new row.
+
+### Please note
+It is not possible to create complex layouts that include nesting rows within rows. To create more advanced rows we advise that you use raw html in your article or use a preset template created in a layout tool such as <a href="https://www.nonumber.nl/extensions/contenttemplater">Nonumber's Content Templater component</a>.
 
 ## Example grid
 The following code will render two blocks of text that fill approximately 50% of the width of the parent container
