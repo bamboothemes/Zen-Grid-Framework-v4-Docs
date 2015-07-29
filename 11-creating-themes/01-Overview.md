@@ -48,6 +48,6 @@ This description will display when the user has installed the template and it's 
 ## Create the new zip file
 14. Now zip the files into a new zip package using your favourite zip app. The files should not be nested in any folders in the zip.
 15. Rename the zip for your convenience to tpl-orion.zip
-16. Youu can now test that the zip is installable by installing the newly created zip file in your Joomla installation.
+16. You can now test that the zip is installable by installing the newly created zip file in your Joomla installation.
 
 
