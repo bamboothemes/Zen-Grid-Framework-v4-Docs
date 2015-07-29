@@ -36,9 +36,18 @@ This description will display when the user has installed the template and it's 
 		en-GB.tpl_orion.ini
 		en-GB.tpl_orion.sys.ini
 
+
+## Edit the template_info.php
+
+11. The details that are displayed on the template's overview page can be found in the template_info.php in the template root. This file contains the information and regarding the template including the description and the various links for the template. Update or remove the information here as required.
+
+## Update the template images
+12. Update the template_preview.png with your new screenshot
+13. Update the template_thumbnail.png with your new screenshot. 
+
 ## Create the new zip file
-11. Now zip the files into a new zip package using your favourite zip app. The files should not be nested in any folders in the zip.
-12. Rename the zip for your convenience to tpl-orion.zip
-13. Youu can now test that the zip is installable by installing the newly created zip file in your Joomla installation.
+14. Now zip the files into a new zip package using your favourite zip app. The files should not be nested in any folders in the zip.
+15. Rename the zip for your convenience to tpl-orion.zip
+16. Youu can now test that the zip is installable by installing the newly created zip file in your Joomla installation.
 
 
