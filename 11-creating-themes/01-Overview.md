@@ -13,37 +13,21 @@ The first step is to change the name of the template and any relevant files in o
 
 ## Edit the templateDetails.xml
 3. Open the file called templateDetails.xml and change the following details:
-4. Change <name>Xero</name> to <name>Orion</name>
-5. Change the version number to v1.0 eg <version>1.0</version>
+4. Change the template name from Xero to Orion
+5. Change the version number to v1.0 
 6. Enter the description of your template in the description tags
-		<description><![CDATA[<div id="hide-intro">
-		Orion is a new theme based on the Zen Grid Framework v4
-		</div>
-		]]></description>
-
+	
 This description will display when the user has installed the template and it's wrapped in a class called hide-intro which will prevent the details here from appearing in the template admin.
 
-7. Next scroll down tot he language section and change the name of the language file used for the template:
- Change these two lines:
-		<language tag="en-GB">en-GB/en-GB.tpl_xero.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_xero.sys.ini</language>
+7. Next scroll down to the language section and change the name of the language file used for the template. Change from en-GB.tpl_xero.ini to en-GB.tpl_orion.ini and en-GB.tpl_xero.sys.ini to en-GB.tpl_orion.sys.ini.
+
+8. The last edit to be made in the templateDetails.xml is to change the path to the framework. Change the path in this params attribute at the bottom of the file from /templates/xero/zengrid/config to /templates/orion/zengrid/config
+
 		
-to:
-		<language tag="en-GB">en-GB/en-GB.tpl_orion.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_orion.sys.ini</language>
-
-7. The last edit to be made in the templateDetails.xml is to change the path to the framework. Change the path in this attribute:
-
-		<fields name="params" addfieldpath="/templates/xero/zengrid/config">
-	
-to:
-
-		<fields name="params" addfieldpath="/templates/orion/zengrid/config">
-		
-8. Save the changes made to the templateDetails.xml
+9. Save the changes made to the templateDetails.xml
 
 ## Rename the language files
-9. In the languages/en-GB folder rename the language files. Change the xero language files from
+10. In the languages/en-GB folder rename the language files. Change the xero language files from
 		en-GB.tpl_xero.ini
 		en-GB.tpl_xero.sys.ini
 	
@@ -53,8 +37,8 @@ to:
 		en-GB.tpl_orion.sys.ini
 
 ## Create the new zip file
-10. Now zip the files into a new zip package using your favourite zip app. The files should not be nested in any folders in the zip.
-11. Rename the zip for your convenience to tpl-orion.zip
-12. Yoiu can now test that the zip is installable by installing the newly created zip file in your Joomla installation.
+11. Now zip the files into a new zip package using your favourite zip app. The files should not be nested in any folders in the zip.
+12. Rename the zip for your convenience to tpl-orion.zip
+13. Youu can now test that the zip is installable by installing the newly created zip file in your Joomla installation.
 
 
