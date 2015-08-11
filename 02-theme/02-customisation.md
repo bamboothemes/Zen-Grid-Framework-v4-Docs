@@ -78,7 +78,7 @@ Benefits:
 
 Challenges:
 - Each time a change is made to the file you will need to recompile less to css in the template admin
-
+- Incorrect less syntax will cause the compiler in the template admin to fail
 
 * Choosing to use a custom.css file
 
