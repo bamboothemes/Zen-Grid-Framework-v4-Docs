@@ -62,3 +62,29 @@ Any text entered here is output directly on the page so you need to add the enti
 	<style>body{background:red}</style>
 
 this styling is best added to the before closing head option. 
+
+
+Customisation Frequently Asked Questions
+---
+* Does custom.less work the same as custom.css?
+
+Adding changes to the custom.less or custom.css file more or less results in the same outcome - that is that your changes are applied to your site. However there are some things to consider before choosing which method suits you the most.
+
+* Choosing to use a Choosing custom.less
+
+Benefits:
+- The developer can use less syntax and variables while adding their customisations
+- No extra files are added to the output of the site
+
+Challenges:
+- Each time a change is made to the file you will need to recompile less to css in the template admin
+
+
+* Choosing to use a custom.css file
+
+Benefits:
+- Changes are automatically added to the site without the need to compile less to css.
+
+Challenges:
+- An extra file (custom.css) is added to the output of your site. Even though your customisations are likely to be small adding another http request will impact the speed of the site.
+- It's not possible to use less syntax including variables in your custom.css file.
