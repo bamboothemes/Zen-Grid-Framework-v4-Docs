@@ -66,11 +66,11 @@ this styling is best added to the before closing head option.
 
 Customisation Frequently Asked Questions
 ---
-* Does custom.less work the same as custom.css?
+_Does custom.less work the same as custom.css?_
 
 Adding changes to the custom.less or custom.css file more or less results in the same outcome - that is that your changes are applied to your site. However there are some things to consider before choosing which method suits you the most.
 
-* Choosing to use a Choosing custom.less
+_Choosing to use a Choosing custom.less_
 
 Benefits:
 - The developer can use less syntax and variables while adding their customisations
@@ -80,7 +80,7 @@ Challenges:
 - Each time a change is made to the file you will need to recompile less to css in the template admin
 - Incorrect less syntax will cause the compiler in the template admin to fail
 
-* Choosing to use a custom.css file
+_Choosing to use a custom.css file_
 
 Benefits:
 - Changes are automatically added to the site without the need to compile less to css.
