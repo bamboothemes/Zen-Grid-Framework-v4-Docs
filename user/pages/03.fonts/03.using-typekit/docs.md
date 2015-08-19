@@ -4,4 +4,6 @@ taxonomy:
     category: docs
 ---
 
-## Coming soon
+### Screenshot of Typekit settings
+![Using Typekit](/images/typekit/using-typekit.png)
+ 
