@@ -1,5 +1,5 @@
 ---
-title: What does the load saved settings button do
+title: Importing existing template settings
 taxonomy:
     category: docs
 ---
