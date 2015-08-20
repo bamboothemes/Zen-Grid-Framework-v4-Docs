@@ -6,6 +6,28 @@ taxonomy:
 
 This is the changelog for the Zen Grid Framework v4. The framework is a folder of files that are included in each ZGFv4 based theme. When a theme is updated the framework is automatically updated. The changelog below is a record of changes made to the framework.
 
+
+v1.3.3
+---
+- Remove gutter variable from .control-label and replace with 10px margin
+- Make sections clear properly
+- Fix bottom margin on forms elements
+- Adds default smart search styling; 
+- Fix sticky nav jumping
+- Adds ability to override overview panel
+- Fix no margin on tablets and phones
+
+
+v1.3.2
+---
+- Default for get images input
+- Adds get image input field
+- Fix mime type for js compressor
+- Fix background fixed images
+- Fix missing search icon
+- Fix color of close button for alerts
+- Update less.js to v2.5
+
 v1.3.1
 ---
 - Change module chrome for modules in menu to zendefault
