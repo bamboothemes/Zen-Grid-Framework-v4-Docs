@@ -30,7 +30,7 @@ Zen Shortcode also makes it possible to render blocks of code with titles such a
 
 ### Example
 {zen-pre}code|This is a block of code{/zen-pre}
-Once again the curly brackets required for rendering the display has been replaced with square brackets in order to be able to display the markup here.
+
 
 
 ## Using custom syntax
