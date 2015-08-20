@@ -5,7 +5,7 @@ taxonomy:
 ---
 
 
-Megamenu functionality such as displaying a module in the menu, icons int he menu titles or multiple columns are implemented via the Zen Menu plugin.
+Megamenu functionality such as displaying a module in the menu, icons in the menu titles or multiple columns are implemented via the Zen Menu plugin.
 
 The zenmenu plugin is a Joomla system plugin that adds mega menu functionality to your zen grid framework v4 based theme.
 

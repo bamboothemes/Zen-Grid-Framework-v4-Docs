@@ -15,7 +15,7 @@ This section of the knowledgebase:
 - Add new javascript
 - Replace jQuery
 - Use a CDN
-- Add custom scripts to various places int he page
+- Add custom scripts to various places in the page
 - Use the Mobile detect function
 - Remove the Joomla generator tag
 - Optimise the template admin interface

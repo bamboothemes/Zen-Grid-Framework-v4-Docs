@@ -21,7 +21,7 @@ The syntax used to render buttons is as per follows.
 
 {zen-btn}Google|http://www.google.com{/zen-btn}
 
-Please note that the curly brackets have been replaced with square brackets in order to avoid rendering the item here.
+
 
 
 ## Rendering code blocks
