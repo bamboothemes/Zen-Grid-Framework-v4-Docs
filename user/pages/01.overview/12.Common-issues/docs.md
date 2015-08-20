@@ -12,17 +12,11 @@ The error can be caused by a number of different factors but generally it's to d
 
 ## Some factors in the behaviour you are experiencing are:
 
-1. Using Admintools Pro and it's blocking the scripts.
+1. Using Admintools Pro and it's blocking the scripts. Read this <a href="http://localhost:8888/zgf4-docs/overview/Using-admintools-pro">article</a>.
 
-docs.joomlabamboo.com/zen-grid-framework-4/overview/Using-ZGFv4-themes-with-Admintools-pro.html
+2. Your servers execution time isn't high enough to allow for the processing of the Less. See how to <a href="http://stackoverflow.com/questions/16171132/how-to-increase-maximum-execution-time-in-php">increase the server execution time</a>.
 
-2. Your servers execution time isn't high enough to allow for the processing of the Less.
-
-stackoverflow.com/questions/16171132/how-to-increase-maximum-execution-time-in-php
-
-3. Your server memory isn't high enough to allow you to process the less.
-
-docs.joomlabamboo.com/getting-started/how-to-check-php-memory-limit-for-joomla-3
+3. Your server memory isn't high enough to allow you to process the less. Learn how to <a href="http://docs.joomlabamboo.com/getting-started/how-to-check-php-memory-limit-for-joomla-3">increase the server memory</a>.
 
 4. There is an error in one of the less variables. You may need to look in the inspector to see this.
 
