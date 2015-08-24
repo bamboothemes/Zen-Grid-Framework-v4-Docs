@@ -1,5 +1,5 @@
 ---
-title: Icons
+title: Zen Shortcode Icons
 menu: Icons
 taxonomy:
     category: docs
