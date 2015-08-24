@@ -5,6 +5,7 @@ taxonomy:
     category: docs
 ---
 
+![Zen Shortcode Example](/images/shortcodes/shortcode-example.jpeg)
 
 ## Rendering Font icons
 
