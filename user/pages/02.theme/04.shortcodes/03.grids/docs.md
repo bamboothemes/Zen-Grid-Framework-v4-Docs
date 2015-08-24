@@ -1,5 +1,5 @@
 ---
-title: Grid Layouts
+title: Zen Shortcode Grid Layouts
 taxonomy:
     category: docs
 ---

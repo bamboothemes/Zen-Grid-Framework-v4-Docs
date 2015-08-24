@@ -1,5 +1,5 @@
 ---
-title: Buttons
+title: Zen Shortcode Buttons
 menu: Buttons
 taxonomy:
     category: docs

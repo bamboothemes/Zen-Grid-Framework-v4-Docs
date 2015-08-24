@@ -1,5 +1,5 @@
 ---
-title: Effects
+title: Zen Shortcode Effects
 menu: Effects
 taxonomy:
     category: docs

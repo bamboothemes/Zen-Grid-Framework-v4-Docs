@@ -1,5 +1,5 @@
 ---
-title: Custom Syntax
+title: Zen Shortcode Custom Syntax
 taxonomy:
     category: docs
 ---

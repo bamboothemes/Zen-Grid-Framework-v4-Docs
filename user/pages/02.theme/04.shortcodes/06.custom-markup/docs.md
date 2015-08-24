@@ -1,5 +1,5 @@
 ---
-title: Custom Markup
+title: Zen Shortcode Custom Markup
 taxonomy:
     category: docs
 ---

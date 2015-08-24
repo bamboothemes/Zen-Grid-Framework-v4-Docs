@@ -1,5 +1,5 @@
 ---
-title: Custom Icons
+title: Zen Shortcode Custom Icons
 taxonomy:
     category: docs
 ---
