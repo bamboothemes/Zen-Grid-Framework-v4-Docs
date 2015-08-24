@@ -6,6 +6,7 @@ taxonomy:
 ---
 
 ![Zen Shortcode Example](/images/shortcodes/shortcode-example.jpg)
+The screenshot above shows Zen Shortcode icons being used in a custom html module in the <a href="http://www.joomlabamboo.com/joomla-templates/boost">Boost Joomla template</a>.
 
 ## Rendering Font icons
 
