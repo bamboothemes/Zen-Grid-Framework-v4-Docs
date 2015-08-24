@@ -62,6 +62,7 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
         \t\t\t\t<li><a href=\"http://www.joomlabamboo.com/index.php?option=com_rsticketspro&amp;view=submit&amp;Itemid=42\">Tickets</a></li>
         \t\t\t\t<li><a href=\"http://www.joomlabamboo.com/downloads/template-downloads\">Downloads</a></li>
         \t\t\t\t<li><a href=\"http://www.joomlabamboo.com/blog\">Blog</a></li>\t
+        \t\t\t\t<li style=\"float: right;\" ><a href=\"https://github.com/locii/Zen-Grid-Framework-v4-Docs\"><span style=\"margin-right: 10px;\" class=\"fa fa-github\"></span>Download Documentation</a></li>
         \t\t\t</ul>
     \t\t\t</nav>
     \t\t</div>
@@ -76,7 +77,7 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
           \t\t<div class=\"searchbox\">
           \t\t    <label for=\"search-by\"><i class=\"fa fa-search\"></i></label>
           \t\t    <input id=\"search-by\" type=\"text\" placeholder=\"Search Documentation\" data-search-input=\"";
-        // line 75
+        // line 76
         echo (isset($context["base_url_relative"]) ? $context["base_url_relative"] : null);
         echo "/search.json/query\" />
           \t\t    <span data-search-clear><i class=\"fa fa-close\"></i></span>
@@ -86,26 +87,26 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
        </div>
     </div>
     ";
-        // line 82
+        // line 83
         if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "breadcrumbs", array()), "enabled", array())) {
-            // line 83
-            echo "    ";
-            $this->loadTemplate("partials/breadcrumbs.html.twig", "partials/base.html.twig", 83)->display($context);
             // line 84
             echo "    ";
+            $this->loadTemplate("partials/breadcrumbs.html.twig", "partials/base.html.twig", 84)->display($context);
+            // line 85
+            echo "    ";
         }
-        // line 85
+        // line 86
         echo "    ";
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 94
+        // line 95
         echo "
     ";
-        // line 95
+        // line 96
         $this->displayBlock('body', $context, $blocks);
-        // line 116
+        // line 117
         echo "    ";
         $this->displayBlock('analytics', $context, $blocks);
-        // line 117
+        // line 118
         echo " </body>
 </html>
 ";
@@ -221,27 +222,27 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
     ";
     }
 
-    // line 85
+    // line 86
     public function block_sidebar($context, array $blocks = array())
     {
-        // line 86
+        // line 87
         echo "   
     <nav id=\"sidebar\">
         
         <div class=\"padding highlightable\">
         ";
-        // line 90
-        $this->loadTemplate("partials/sidebar.html.twig", "partials/base.html.twig", 90)->display($context);
         // line 91
+        $this->loadTemplate("partials/sidebar.html.twig", "partials/base.html.twig", 91)->display($context);
+        // line 92
         echo "        </div>
     </nav>
     ";
     }
 
-    // line 95
+    // line 96
     public function block_body($context, array $blocks = array())
     {
-        // line 96
+        // line 97
         echo "    <section id=\"body\">
         <div id=\"overlay\"></div>
 
@@ -251,54 +252,54 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
             
 
             ";
-        // line 104
-        $this->displayBlock('content', $context, $blocks);
         // line 105
+        $this->displayBlock('content', $context, $blocks);
+        // line 106
         echo "
             ";
-        // line 106
+        // line 107
         $this->displayBlock('footer', $context, $blocks);
-        // line 111
+        // line 112
         echo "
         </div>
         ";
-        // line 113
-        $this->displayBlock('navigation', $context, $blocks);
         // line 114
+        $this->displayBlock('navigation', $context, $blocks);
+        // line 115
         echo "    </section>
     ";
     }
 
-    // line 104
+    // line 105
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 106
+    // line 107
     public function block_footer($context, array $blocks = array())
     {
-        // line 107
+        // line 108
         echo "                ";
         if (($this->getAttribute($this->getAttribute((isset($context["theme_config"]) ? $context["theme_config"] : null), "github", array()), "position", array()) == "bottom")) {
-            // line 108
-            echo "                ";
-            $this->loadTemplate("partials/github_note.html.twig", "partials/base.html.twig", 108)->display($context);
             // line 109
             echo "                ";
+            $this->loadTemplate("partials/github_note.html.twig", "partials/base.html.twig", 109)->display($context);
+            // line 110
+            echo "                ";
         }
-        // line 110
+        // line 111
         echo "            ";
     }
 
-    // line 113
+    // line 114
     public function block_navigation($context, array $blocks = array())
     {
     }
 
-    // line 116
+    // line 117
     public function block_analytics($context, array $blocks = array())
     {
-        $this->loadTemplate("partials/analytics.html.twig", "partials/base.html.twig", 116)->display($context);
+        $this->loadTemplate("partials/analytics.html.twig", "partials/base.html.twig", 117)->display($context);
     }
 
     public function getTemplateName()
@@ -313,6 +314,6 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
 
     public function getDebugInfo()
     {
-        return array (  299 => 116,  294 => 113,  290 => 110,  287 => 109,  284 => 108,  281 => 107,  278 => 106,  273 => 104,  268 => 114,  266 => 113,  262 => 111,  260 => 106,  257 => 105,  255 => 104,  245 => 96,  242 => 95,  236 => 91,  234 => 90,  228 => 86,  225 => 85,  218 => 35,  215 => 34,  212 => 33,  209 => 32,  206 => 31,  203 => 30,  197 => 27,  194 => 26,  191 => 25,  188 => 24,  185 => 23,  182 => 22,  180 => 21,  177 => 20,  174 => 19,  171 => 18,  168 => 17,  165 => 16,  162 => 15,  159 => 14,  154 => 37,  152 => 30,  149 => 29,  147 => 14,  142 => 12,  138 => 11,  134 => 10,  131 => 9,  129 => 8,  121 => 7,  118 => 6,  115 => 5,  109 => 117,  106 => 116,  104 => 95,  101 => 94,  98 => 85,  95 => 84,  92 => 83,  90 => 82,  80 => 75,  50 => 50,  37 => 39,  35 => 5,  30 => 2,  28 => 1,);
+        return array (  300 => 117,  295 => 114,  291 => 111,  288 => 110,  285 => 109,  282 => 108,  279 => 107,  274 => 105,  269 => 115,  267 => 114,  263 => 112,  261 => 107,  258 => 106,  256 => 105,  246 => 97,  243 => 96,  237 => 92,  235 => 91,  229 => 87,  226 => 86,  219 => 35,  216 => 34,  213 => 33,  210 => 32,  207 => 31,  204 => 30,  198 => 27,  195 => 26,  192 => 25,  189 => 24,  186 => 23,  183 => 22,  181 => 21,  178 => 20,  175 => 19,  172 => 18,  169 => 17,  166 => 16,  163 => 15,  160 => 14,  155 => 37,  153 => 30,  150 => 29,  148 => 14,  143 => 12,  139 => 11,  135 => 10,  132 => 9,  130 => 8,  122 => 7,  119 => 6,  116 => 5,  110 => 118,  107 => 117,  105 => 96,  102 => 95,  99 => 86,  96 => 85,  93 => 84,  91 => 83,  81 => 76,  50 => 50,  37 => 39,  35 => 5,  30 => 2,  28 => 1,);
     }
 }

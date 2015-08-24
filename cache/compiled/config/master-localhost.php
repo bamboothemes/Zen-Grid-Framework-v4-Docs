@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1440023280,
-    'checksum' => '2af1c1f5dae315f09aa76d43c45fa4e2',
+    'timestamp' => 1440377391,
+    'checksum' => '9c83b1a90b0c311cd87965e48d2f2dca',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -316,7 +316,7 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'Joomla Template Documentation',
+            'title' => 'Zen Grid Framework v4 Documentation',
             'author' => [
                 'name' => 'John Appleseed',
                 'email' => 'john@email.com'
@@ -326,7 +326,7 @@ return [
                 1 => 'tag'
             ],
             'metadata' => [
-                'description' => 'Zen Grid Framework v4Knowledgebase'
+                'description' => 'Zen Grid Framework v4 Knowledgebase'
             ],
             'summary' => [
                 'enabled' => true,
@@ -413,7 +413,7 @@ return [
                 'markdown_extra' => true
             ],
             'cache' => [
-                'enabled' => false,
+                'enabled' => true,
                 'check' => [
                     'method' => 'file'
                 ],
