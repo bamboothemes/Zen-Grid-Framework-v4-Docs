@@ -19,7 +19,6 @@ When this option is selected there the menu is not given any special treatment a
 	
 Stacked
 ----
-{{ "700x250" | placeholder | image_tag }}
 
 The stacked option adds a little more styling in that the menus items are forced to fill the entire width of the main container. All sub menu items are also hidden from view and are not available to your users.
 	
@@ -28,7 +27,7 @@ This option may be applicable to some sites that have a small number of menu ite
 Select Menu
 ----
 
-{{ "700x250" | placeholder | image_tag }}
+
 
 The select menu transforms the main navigation into a select box that contains all menu items that the user would see above the navcollapse breakpoint.
 	
@@ -41,7 +40,7 @@ The javascript for the select menu can be found in the js/libs/jquery.resmenu.mi
 	
 Toggle Menu
 ----
-{{ "700x250" | placeholder | image_tag }}
+
 
 The toggle menu is displayed at the top of the page on browsers below the navcollapse breakpoint.
 	

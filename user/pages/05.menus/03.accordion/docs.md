@@ -8,7 +8,7 @@ Zen Grid Framework v4 (ZGF4) themes come with the ability to transform a standar
 
 An accordion menu allows the user to view nested menu items in a menu by clicking on the parent item. ZGF4 menu's allow any type of menu item to act as a parent menu item.
 
-The accordion comes with two options:
+The accordion comes with two options that are defined in the template settings:
 - A traditional accordion menu which allows a single nested menu item to be open at a time.
 - Or a panel menu which allows multiple nested sub level items to be open at a time.
 
