@@ -12,6 +12,8 @@ The accordion comes with two options that are defined in the template settings:
 - A traditional accordion menu which allows a single nested menu item to be open at a time.
 - Or a panel menu which allows multiple nested sub level items to be open at a time.
 
+In addition to the template settings below, the menu module needs a module class suffix of 'accordion' for the correct styling and javascript to be applied to the menu.
+
 
 ### Accordion settings
 ![General Layout](/images/documentation/menu/accordion.jpg)
