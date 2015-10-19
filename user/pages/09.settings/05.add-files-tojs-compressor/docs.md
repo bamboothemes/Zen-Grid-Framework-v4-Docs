@@ -7,6 +7,7 @@ taxonomy:
 
 ![Javascript Compressor](/images/documentation/performance/javascript-compressor.jpg)
 
+## Add external javascript files to the template javascript
 If you would like to compress external or additional javascript files inside the single template javascript file then you can add the relative path to the javascript file in the text area here. Each file needs to be entered on a new line.
 
 In order to compress the new file into the template.js file you will need to also click the compress scripts button as seen in the screen shot and then proceed to save the template by clicking the save or save and close button at the top of the page.
