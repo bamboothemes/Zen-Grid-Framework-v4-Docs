@@ -4,8 +4,6 @@ taxonomy:
     category: docs
 ---
 
-	Settings > Javascript
-
 ![Javascript Compressor](/images/documentation/performance/javascript-compressor.jpg)
 
 ## Add external javascript files to the template javascript
