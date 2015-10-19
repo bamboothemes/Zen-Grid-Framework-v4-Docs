@@ -4,6 +4,7 @@ taxonomy:
     category: docs
 ---
 
+	Settings > Javascript
 
 ![Javascript Compressor](/images/documentation/performance/javascript-compressor.jpg)
 
