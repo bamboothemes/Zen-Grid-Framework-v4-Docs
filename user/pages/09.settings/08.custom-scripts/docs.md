@@ -6,3 +6,4 @@ taxonomy:
 
 ![Add custom scripts](/images/documentation/performance/add-custom-scripts.jpg)
   
+ 

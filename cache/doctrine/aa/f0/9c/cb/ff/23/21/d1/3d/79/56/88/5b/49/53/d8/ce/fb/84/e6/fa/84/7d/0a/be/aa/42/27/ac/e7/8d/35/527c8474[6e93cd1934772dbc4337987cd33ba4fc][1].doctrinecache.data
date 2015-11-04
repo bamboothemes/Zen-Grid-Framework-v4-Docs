@@ -1,0 +1,25 @@
+1447221230
+s:1429:"<p>There are two main ways that new module positions can be added to Zen Grid Framework v4 themes.</p>
+<h2>Adding using the default Joomla syntax</h2>
+<p>A new module position can be added to your template using the default Joomla syntax as per the following code:</p>
+<pre><code>&lt;jdoc:include type="modules" name="enter-your-module-name-here" style="zendefault" /&gt;</code></pre>
+<p>This can be added in the tpls/default.php or in the layout blocks eg tpls/blocks/top.php.</p>
+<p>Please note that adding a module position using this syntax will not mean that the module name shows up in the template's layout control in the template settings. In order to have the width of the module show up in the template layout panel you will need to use the second option noted below.</p>
+<h2>Adding a position to the template layout tool.</h2>
+<p>Adding a position to the template and having it show up in the template panel is slightly more complicated and involves a number of different steps.</p>
+<ol>
+<li>The first step is to add the position to the positions.json file located in the settings/layouts folder.</li>
+</ol>
+<p>The positions.json file is a standard json file with the information stored for the modules as follows:</p>
+<pre><code>"top": {
+    "top1": "3",
+    "top2": "3",
+    "top3": "3",
+    "top4": "3"
+},
+"header": {
+    "header1": "6",
+    "header2": "6",
+    "header3": "5",
+    "header4": "7"
+} ...</code></pre>";
