@@ -23,7 +23,7 @@ In this case:
 becomes
 
 	"top": {
-	    "opening": "3",
+	    "top1": "3",
 	    "top2": "3",
 	    "top3": "3",
 	    "top4": "3",
