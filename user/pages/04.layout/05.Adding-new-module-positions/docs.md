@@ -78,7 +78,7 @@ So in order to complete this step you need to click on the name of the module yo
 
 ## Add the name of the positions to the templateDetails.xml
 
-The nest step is to add the names of the new positions to the template.xml file. Open this file and locate the position group of entries eg starting with <position> and add the names of the new positions: 
+The nest step is to add the names of the new positions to the templateDetails.xml file. Open this file and locate the position group of entries eg starting with <position> and add the names of the new positions: 
 
 	<position>feature1</position>
 	<position>feature2</position>
