@@ -67,7 +67,7 @@ After adding this code the features row will now display in the template layout 
 
 ![Adding new positions](/images/adding-position/feature-module-admin-1.png)
 
-However as you can see in the screenshot above that the new moduels are turned off by default.
+However as you can see in the screenshot above that the new modules are turned off by default.
 
 So in order to complete this step you need to click on the name of the module you want to display in order to publish them in this layout.
 
