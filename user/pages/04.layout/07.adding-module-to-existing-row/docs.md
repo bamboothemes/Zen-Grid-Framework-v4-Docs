@@ -1,5 +1,5 @@
 ---
-title: Changing module names in the layout
+title: How to  add position to an existing row
 menu: Add position to existing row
 taxonomy:
     category: docs
