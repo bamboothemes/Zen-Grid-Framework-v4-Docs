@@ -24,3 +24,13 @@ Add that code to your content item will result in a heart icon being rendered on
 Please Note:
 Effects need to be separated using the | symbol.
 Content must be preceded by the : symbol.
+
+## Advanced delimiter option 
+This is an option that was added to v1.4.0 of the plugin.
+
+Enabling this option changes the delimiter to ||| rather than the default delimiter which is |.
+
+To enable this go to the extensions manager in your Joomla site and edit the Zen Shortcode settings.
+
+
+![htaccess maker](/images/shortcodes/shortcode-delimiter.png)
