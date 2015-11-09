@@ -44,9 +44,199 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
       ga('send', 'pageview');
     
     </script>
+    
+    <script>
+        \$(document).ready(function() {
+    \t     
+    \t     \$('#filterlist').quicksearch('#catlist li');
+    \t     \$('#catlist li').css('display', '');
+    \t});
+           
+    \t(function(\$, window, document, undefined) {
+    \t\t\$.fn.quicksearch = function (target, opt) {
+    \t\t\t
+    \t\t\tvar timeout, cache, rowcache, jq_results, val = '', e = this, options = \$.extend({ 
+    \t\t\t\tdelay: 100,
+    \t\t\t\tselector: null,
+    \t\t\t\tstripeRows: null,
+    \t\t\t\tloader: null,
+    \t\t\t\tnoResults: '',
+    \t\t\t\tmatchedResultsCount: 0,
+    \t\t\t\tbind: 'keyup',
+    \t\t\t\tonBefore: function () { 
+    \t\t\t\t\treturn;
+    \t\t\t\t},
+    \t\t\t\tonAfter: function () { 
+    \t\t\t\t\treturn;
+    \t\t\t\t},
+    \t\t\t\tshow: function () {
+    \t\t\t\t\tthis.style.display = \"\";
+    \t\t\t\t},
+    \t\t\t\thide: function () {
+    \t\t\t\t\tthis.style.display = \"none\";
+    \t\t\t\t},
+    \t\t\t\tprepareQuery: function (val) {
+    \t\t\t\t\treturn val.toLowerCase().split(' ');
+    \t\t\t\t},
+    \t\t\t\ttestQuery: function (query, txt, _row) {
+    \t\t\t\t\tfor (var i = 0; i < query.length; i += 1) {
+    \t\t\t\t\t\tif (txt.indexOf(query[i]) === -1) {
+    \t\t\t\t\t\t\treturn false;
+    \t\t\t\t\t\t}
+    \t\t\t\t\t}
+    \t\t\t\t\treturn true;
+    \t\t\t\t}
+    \t\t\t}, opt);
+    \t\t\t
+    \t\t\tthis.go = function () {
+    \t\t\t\t
+    \t\t\t\tvar i = 0,
+    \t\t\t\t\tnumMatchedRows = 0,
+    \t\t\t\t\tnoresults = true, 
+    \t\t\t\t\tquery = options.prepareQuery(val),
+    \t\t\t\t\tval_empty = (val.replace(' ', '').length === 0);
+    \t\t\t\t
+    \t\t\t\tfor (var i = 0, len = rowcache.length; i < len; i++) {
+    \t\t\t\t\tif (val_empty || options.testQuery(query, cache[i], rowcache[i])) {
+    \t\t\t\t\t\toptions.show.apply(rowcache[i]);
+    \t\t\t\t\t\tnoresults = false;
+    \t\t\t\t\t\tnumMatchedRows++;
+    \t\t\t\t\t} else {
+    \t\t\t\t\t\toptions.hide.apply(rowcache[i]);
+    \t\t\t\t\t}
+    \t\t\t\t}
+    \t\t\t\t
+    \t\t\t\tif (noresults) {
+    \t\t\t\t\tthis.results(false);
+    \t\t\t\t} else {
+    \t\t\t\t\tthis.results(true);
+    \t\t\t\t\tthis.stripe();
+    \t\t\t\t}
+    \t\t\t\t
+    \t\t\t\tthis.matchedResultsCount = numMatchedRows;
+    \t\t\t\tthis.loader(false);
+    \t\t\t\toptions.onAfter();
+    \t\t\t\t
+    \t\t\t\treturn this;
+    \t\t\t};
+    \t\t\t
+    \t\t\t/*
+    \t\t\t * External API so that users can perform search programatically. 
+    \t\t\t * */
+    \t\t\tthis.search = function (submittedVal) {
+    \t\t\t\tval = submittedVal;
+    \t\t\t\te.trigger();
+    \t\t\t};
+    \t\t\t
+    \t\t\t/*
+    \t\t\t * External API to get the number of matched results as seen in 
+    \t\t\t * https://github.com/ruiz107/quicksearch/commit/f78dc440b42d95ce9caed1d087174dd4359982d6
+    \t\t\t * */
+    \t\t\tthis.currentMatchedResults = function() {
+    \t\t\t\treturn this.matchedResultsCount;
+    \t\t\t};
+    \t\t\t
+    \t\t\tthis.stripe = function () {
+    \t\t\t\t
+    \t\t\t\tif (typeof options.stripeRows === \"object\" && options.stripeRows !== null)
+    \t\t\t\t{
+    \t\t\t\t\tvar joined = options.stripeRows.join(' ');
+    \t\t\t\t\tvar stripeRows_length = options.stripeRows.length;
+    \t\t\t\t\t
+    \t\t\t\t\tjq_results.not(':hidden').each(function (i) {
+    \t\t\t\t\t\t\$(this).removeClass(joined).addClass(options.stripeRows[i % stripeRows_length]);
+    \t\t\t\t\t});
+    \t\t\t\t}
+    \t\t\t\t
+    \t\t\t\treturn this;
+    \t\t\t};
+    \t\t\t
+    \t\t\tthis.strip_html = function (input) {
+    \t\t\t\tvar output = input.replace(new RegExp('<[^<]+\\>', 'g'), \"\");
+    \t\t\t\toutput = \$.trim(output.toLowerCase());
+    \t\t\t\treturn output;
+    \t\t\t};
+    \t\t\t
+    \t\t\tthis.results = function (bool) {
+    \t\t\t\tif (typeof options.noResults === \"string\" && options.noResults !== \"\") {
+    \t\t\t\t\tif (bool) {
+    \t\t\t\t\t\t\$(options.noResults).hide();
+    \t\t\t\t\t} else {
+    \t\t\t\t\t\t\$(options.noResults).show();
+    \t\t\t\t\t}
+    \t\t\t\t}
+    \t\t\t\treturn this;
+    \t\t\t};
+    \t\t\t
+    \t\t\tthis.loader = function (bool) {
+    \t\t\t\tif (typeof options.loader === \"string\" && options.loader !== \"\") {
+    \t\t\t\t\t (bool) ? \$(options.loader).show() : \$(options.loader).hide();
+    \t\t\t\t}
+    \t\t\t\treturn this;
+    \t\t\t};
+    \t\t\t
+    \t\t\tthis.cache = function () {
+    \t\t\t\t
+    \t\t\t\tjq_results = \$(target);
+    \t\t\t\t
+    \t\t\t\tif (typeof options.noResults === \"string\" && options.noResults !== \"\") {
+    \t\t\t\t\tjq_results = jq_results.not(options.noResults);
+    \t\t\t\t}
+    \t\t\t\t
+    \t\t\t\tvar t = (typeof options.selector === \"string\") ? jq_results.find(options.selector) : \$(target).not(options.noResults);
+    \t\t\t\tcache = t.map(function () {
+    \t\t\t\t\treturn e.strip_html(this.innerHTML);
+    \t\t\t\t});
+    \t\t\t\t
+    \t\t\t\trowcache = jq_results.map(function () {
+    \t\t\t\t\treturn this;
+    \t\t\t\t});
+    \t
+    \t\t\t\t/*
+    \t\t\t\t * Modified fix for sync-ing \"val\". 
+    \t\t\t\t * Original fix https://github.com/michaellwest/quicksearch/commit/4ace4008d079298a01f97f885ba8fa956a9703d1
+    \t\t\t\t * */
+    \t\t\t\tval = val || this.val() || \"\";
+    \t\t\t\t
+    \t\t\t\treturn this.go();
+    \t\t\t};
+    \t\t\t
+    \t\t\tthis.trigger = function () {
+    \t\t\t\tthis.loader(true);
+    \t\t\t\toptions.onBefore();
+    \t\t\t\t
+    \t\t\t\twindow.clearTimeout(timeout);
+    \t\t\t\ttimeout = window.setTimeout(function () {
+    \t\t\t\t\te.go();
+    \t\t\t\t}, options.delay);
+    \t\t\t\t
+    \t\t\t\treturn this;
+    \t\t\t};
+    \t\t\t
+    \t\t\tthis.cache();
+    \t\t\tthis.results(true);
+    \t\t\tthis.stripe();
+    \t\t\tthis.loader(false);
+    \t\t\t
+    \t\t\treturn this.each(function () {
+    \t\t\t\t
+    \t\t\t\t/*
+    \t\t\t\t * Changed from .bind to .on.
+    \t\t\t\t * */
+    \t\t\t\t\$(this).on(options.bind, function () {
+    \t\t\t\t\t
+    \t\t\t\t\tval = \$(this).val();
+    \t\t\t\t\te.trigger();
+    \t\t\t\t});
+    \t\t\t});
+    \t\t\t
+    \t\t};
+    \t
+    \t}(jQuery, this, document));       
+    </script>
 </head>
 <body class=\"";
-        // line 50
+        // line 240
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "body_classes", array());
         echo "\" data-url=\"";
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "route", array());
@@ -77,7 +267,7 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
           \t\t<div class=\"searchbox\">
           \t\t    <label for=\"search-by\"><i class=\"fa fa-search\"></i></label>
           \t\t    <input id=\"search-by\" type=\"text\" placeholder=\"Search Documentation\" data-search-input=\"";
-        // line 76
+        // line 266
         echo (isset($context["base_url_relative"]) ? $context["base_url_relative"] : null);
         echo "/search.json/query\" />
           \t\t    <span data-search-clear><i class=\"fa fa-close\"></i></span>
@@ -87,26 +277,26 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
        </div>
     </div>
     ";
-        // line 83
+        // line 273
         if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "breadcrumbs", array()), "enabled", array())) {
-            // line 84
+            // line 274
             echo "    ";
-            $this->loadTemplate("partials/breadcrumbs.html.twig", "partials/base.html.twig", 84)->display($context);
-            // line 85
+            $this->loadTemplate("partials/breadcrumbs.html.twig", "partials/base.html.twig", 274)->display($context);
+            // line 275
             echo "    ";
         }
-        // line 86
+        // line 276
         echo "    ";
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 95
+        // line 285
         echo "
     ";
-        // line 96
+        // line 286
         $this->displayBlock('body', $context, $blocks);
-        // line 117
+        // line 307
         echo "    ";
         $this->displayBlock('analytics', $context, $blocks);
-        // line 118
+        // line 308
         echo " </body>
 </html>
 ";
@@ -222,27 +412,27 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
     ";
     }
 
-    // line 86
+    // line 276
     public function block_sidebar($context, array $blocks = array())
     {
-        // line 87
+        // line 277
         echo "   
     <nav id=\"sidebar\">
         
         <div class=\"padding highlightable\">
         ";
-        // line 91
-        $this->loadTemplate("partials/sidebar.html.twig", "partials/base.html.twig", 91)->display($context);
-        // line 92
+        // line 281
+        $this->loadTemplate("partials/sidebar.html.twig", "partials/base.html.twig", 281)->display($context);
+        // line 282
         echo "        </div>
     </nav>
     ";
     }
 
-    // line 96
+    // line 286
     public function block_body($context, array $blocks = array())
     {
-        // line 97
+        // line 287
         echo "    <section id=\"body\">
         <div id=\"overlay\"></div>
 
@@ -252,54 +442,54 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
             
 
             ";
-        // line 105
+        // line 295
         $this->displayBlock('content', $context, $blocks);
-        // line 106
+        // line 296
         echo "
             ";
-        // line 107
+        // line 297
         $this->displayBlock('footer', $context, $blocks);
-        // line 112
+        // line 302
         echo "
         </div>
         ";
-        // line 114
+        // line 304
         $this->displayBlock('navigation', $context, $blocks);
-        // line 115
+        // line 305
         echo "    </section>
     ";
     }
 
-    // line 105
+    // line 295
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 107
+    // line 297
     public function block_footer($context, array $blocks = array())
     {
-        // line 108
+        // line 298
         echo "                ";
         if (($this->getAttribute($this->getAttribute((isset($context["theme_config"]) ? $context["theme_config"] : null), "github", array()), "position", array()) == "bottom")) {
-            // line 109
+            // line 299
             echo "                ";
-            $this->loadTemplate("partials/github_note.html.twig", "partials/base.html.twig", 109)->display($context);
-            // line 110
+            $this->loadTemplate("partials/github_note.html.twig", "partials/base.html.twig", 299)->display($context);
+            // line 300
             echo "                ";
         }
-        // line 111
+        // line 301
         echo "            ";
     }
 
-    // line 114
+    // line 304
     public function block_navigation($context, array $blocks = array())
     {
     }
 
-    // line 117
+    // line 307
     public function block_analytics($context, array $blocks = array())
     {
-        $this->loadTemplate("partials/analytics.html.twig", "partials/base.html.twig", 117)->display($context);
+        $this->loadTemplate("partials/analytics.html.twig", "partials/base.html.twig", 307)->display($context);
     }
 
     public function getTemplateName()
@@ -314,6 +504,6 @@ class __TwigTemplate_5c2c99ed7db677a4d60e682c1fd44c79ddf47a2475151dadea701b914f8
 
     public function getDebugInfo()
     {
-        return array (  300 => 117,  295 => 114,  291 => 111,  288 => 110,  285 => 109,  282 => 108,  279 => 107,  274 => 105,  269 => 115,  267 => 114,  263 => 112,  261 => 107,  258 => 106,  256 => 105,  246 => 97,  243 => 96,  237 => 92,  235 => 91,  229 => 87,  226 => 86,  219 => 35,  216 => 34,  213 => 33,  210 => 32,  207 => 31,  204 => 30,  198 => 27,  195 => 26,  192 => 25,  189 => 24,  186 => 23,  183 => 22,  181 => 21,  178 => 20,  175 => 19,  172 => 18,  169 => 17,  166 => 16,  163 => 15,  160 => 14,  155 => 37,  153 => 30,  150 => 29,  148 => 14,  143 => 12,  139 => 11,  135 => 10,  132 => 9,  130 => 8,  122 => 7,  119 => 6,  116 => 5,  110 => 118,  107 => 117,  105 => 96,  102 => 95,  99 => 86,  96 => 85,  93 => 84,  91 => 83,  81 => 76,  50 => 50,  37 => 39,  35 => 5,  30 => 2,  28 => 1,);
+        return array (  490 => 307,  485 => 304,  481 => 301,  478 => 300,  475 => 299,  472 => 298,  469 => 297,  464 => 295,  459 => 305,  457 => 304,  453 => 302,  451 => 297,  448 => 296,  446 => 295,  436 => 287,  433 => 286,  427 => 282,  425 => 281,  419 => 277,  416 => 276,  409 => 35,  406 => 34,  403 => 33,  400 => 32,  397 => 31,  394 => 30,  388 => 27,  385 => 26,  382 => 25,  379 => 24,  376 => 23,  373 => 22,  371 => 21,  368 => 20,  365 => 19,  362 => 18,  359 => 17,  356 => 16,  353 => 15,  350 => 14,  345 => 37,  343 => 30,  340 => 29,  338 => 14,  333 => 12,  329 => 11,  325 => 10,  322 => 9,  320 => 8,  312 => 7,  309 => 6,  306 => 5,  300 => 308,  297 => 307,  295 => 286,  292 => 285,  289 => 276,  286 => 275,  283 => 274,  281 => 273,  271 => 266,  240 => 240,  37 => 39,  35 => 5,  30 => 2,  28 => 1,);
     }
 }
