@@ -6,6 +6,63 @@ taxonomy:
 
 This is the changelog for the Zen Grid Framework v4. The framework is a folder of files that are included in each ZGFv4 based theme. When a theme is updated the framework is automatically updated. The changelog below is a record of changes made to the framework.
 
+v1.4.0
+---
+
+First themes started to be rolled out with this update on 16th Nov, 2016.
+
+New Features
+---
+- General template overrides can now be found int he zengrid/html folder. Templates released before this version will need to be updated with this fix and in most cases the template's html/com_content remains unaffected
+- Allow the user to override the default positions.json by adding their own to the templates/your template/custom/positions.json
+
+
+Improvements
+---
+- Improved display of offcanvas transition.
+- Adds home icon to social icons fields
+- Adds first-level class to top level menu items
+- Add 500px icon to social icon field
+- Improved handling of toggle menu on touch devices
+- Adds get images from main images folder field 
+- Improved display and functionality of com_config views
+- Updated Font Awesome to v4.4
+- Menu headings now use default pointer rather than link cursor
+- Improved offscreen menu detection and display
+- Adds js to retrieve image captions
+- Add missing label styles
+- Improved handling of empty values in less compiler
+- Adds table-hover style
+- Improved display of login, register, reset and remind views
+- Removes unnecessary bootstrap markup
+- Better organised joomla specific less in zengrid folder
+- Improved display of module sin a menu
+
+
+Fixes
+---
+- Fixed various bootstrap2 and bootstrap3 display issues
+- Fix for dropdown menu visibility
+- Adds missing zen-icon class to login overrides
+- Fix duplicate display of page headings
+- Fix template width not exactly matching setting sue to miscalculation of -ve margin
+- Fix for min height input on select boxes
+- Fix extra closing div in html override for user pages
+- Adds missing clear fix to article content
+- Fix icon-remove icon in edit screen
+- Fix missing save and cancel icons on edit form
+- Fix font icon font size for BS
+- Fix compiler not working if placeholder html file in root
+- Remove @gutter from mean menu module
+- Change bottom margin on forms to 10px rather than use @gutter
+- Fix display of chosen dropdowns on edit screens
+- Fix modal being applied to all modal elements
+- Adds missing glyphicons white
+- Fix .hide hiding everything
+- Fix com_finder display error
+- Fix missing variable in html overrides
+
+
 
 v1.3.3
 ---
