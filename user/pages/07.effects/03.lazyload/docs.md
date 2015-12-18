@@ -20,7 +20,7 @@ This option specifies which elements, already targeted with the lazyload selecto
 
 For example, you may have the lazyload selector set to `img` to target all images on the site. If there are specific images which you then want to load normally, you could give them a class of `nolazy` and then add `.nolazy` to the disable selector field.
 
-###Disabling lazyload for a module where a class cannot be added to an image.
+####Disabling lazyload for a module where a class cannot be added to an image.
 
 If you have a module, such as a slideshow or carousel, where lazyloading is causing a problem, you may not always be able to add a class to the image directly.
 
