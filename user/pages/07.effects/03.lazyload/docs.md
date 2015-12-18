@@ -12,7 +12,8 @@ taxonomy:
 
 This options specifies which images to target for lazyloading. You can add multiple selectors separated by a comma.
 
-For example, to target all images on a site you can add the image element `img`. To target only images which have a class of `lazy` you can add `.lazy` or `img.lazy`.
+For example, to target all images on a site you can add the image element `img`   
+To target only images which have a class of `lazy` you can add `.lazy` or `img.lazy`
 
 ##Disable Lazyload Selector
 
