@@ -20,6 +20,8 @@ Most of the theme's functionality is compiled and compressed in the template adm
 
 ## Templates built using Zen Grid Framework v4
 
+- <a href="http://www.joomlabamboo.com/joomla-templates/corporation">Corporation</a> - Released Dec 2015.
+- <a href="http://www.joomlabamboo.com/joomla-templates/ascent2">Ascent2</a> - Released Oct 2015.
 - <a href="http://www.joomlabamboo.com/joomla-templates/medica">Medica</a> - Released Sep 2015.
 - <a href="http://www.joomlabamboo.com/joomla-templates/gazetta">Gazetta</a> - Released Aug 2015.
 - <a href="http://www.joomlabamboo.com/joomla-templates/boost">Boost</a> - Released Jul 2015.
