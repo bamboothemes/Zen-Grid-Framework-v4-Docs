@@ -15,7 +15,7 @@ The control panel for the template found in the Joomla administrator by navigati
 
 Theme
 ----
-A subpart of the template. A theme loads any style reference that is passed to the Less compiler. Themes are located in the settings/themes folder and are named as per the following theme.theme-name-example.less
+A subpart of the template. A theme loads any style reference that is passed to the Less compiler. Themes are located in the settings/themes folder and are named as per the following theme.theme-name-example.json
 
 Template Style
 ----
