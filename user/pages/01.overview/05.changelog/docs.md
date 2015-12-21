@@ -9,11 +9,11 @@ This is the changelog for the Zen Grid Framework v4. The framework is a folder o
 v1.4.0
 ---
 
-First themes started to be rolled out with this update on 16th Nov, 2016.
+First themes started to be rolled out with this update on 16th Nov, 2015.
 
 New Features
 ---
-- General template overrides can now be found int he zengrid/html folder. Templates released before this version will need to be updated with this fix and in most cases the template's html/com_content remains unaffected
+- General template overrides can now be found in the zengrid/html folder. Templates released before this version will need to be updated with this fix and in most cases the template's html/com_content remains unaffected
 - Allow the user to override the default positions.json by adding their own to the templates/your template/custom/positions.json
 
 
