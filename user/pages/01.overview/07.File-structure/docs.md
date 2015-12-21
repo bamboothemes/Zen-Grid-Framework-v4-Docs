@@ -9,6 +9,7 @@ The file structure of a ZGFv4 based theme is typically as follow:
 - ajax.php (Used to process administrator ajax functionality)
 - component.php (standard Joomla component file)
 - css (folder for all compiled less files and custom.css)
+- error.php (standard error file)
 - html (standard Joomla html override folder)
 - images 
 - js 
