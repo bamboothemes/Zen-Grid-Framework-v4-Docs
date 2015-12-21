@@ -14,7 +14,7 @@ A description of the possible warnings follow below.
 
 Admintools pro installed
 --------
-This warning gives instructions on how to allow the template to compile less to css and access saved settings if you have the <a href="https://www.akeebabackup.com/products/admin-tools.html">Admintools Pro</a> component installed. For further instructions please review the using Zen Grid Framework v4 themes with Admintools Pro page.
+This warning gives instructions on how to allow the template to compile less to css and access saved settings if you have the <a href="https://www.akeebabackup.com/products/admin-tools.html">Admintools Pro</a> component installed. For further instructions please review the using Zen Grid Framework v4 themes with [Admintools Pro page](../Using-admintools-pro).
 
 Compile required
 --------
