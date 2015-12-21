@@ -5,7 +5,7 @@ taxonomy:
 ---
 
 
-There are a number of different ways to customise Zen Grif Framework v4 based themes depending on your skill level and the way that you prefer to work.
+There are a number of different ways to customise Zen Grid Framework v4 based themes depending on your skill level and the way that you prefer to work.
 
 Editing and creating themes using the template settings.
 ----
@@ -47,7 +47,7 @@ Adding other files to the compiler
 ----
 It is also possible to include other less files in the template's compiler. These files will be compiled to css after clicking the compile less button and included in the theme's css file. To add files to the compiler go to the settings panel in the administrator and scroll down to the area marked "Add less files to compiler".
 
-![Les Compiler](/images/documentation/performance/less-compiler.jpg")
+![Less Compiler](/images/documentation/performance/less-compiler.jpg")
 
 An example of using this option might be wanting to compile the zentools.less into your template's css file in order to reduce the number of css files loaded in the browser. Zentools is our responsive gallery module and has an option to disable the loading of css files.
 
