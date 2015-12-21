@@ -16,7 +16,7 @@ Basic and advanced mode are toggled on specific panels with a Hide Advanced / Sh
 
 ![Basic Mode](/images/documentation/display/basic-mode.jpg)
 
-Users can click on the Advanced setting toggle while editing the template settings in order to hide or display.
+Users can click on the Advanced setting toggle while editing the template settings in order to hide or display options.
 
 ### Example of layout settings with advanced options enabled.
 ![Advanced Mode](/images/documentation/display/advanced-mode.jpg)
