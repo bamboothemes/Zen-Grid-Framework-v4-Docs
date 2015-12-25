@@ -15,12 +15,11 @@ Assigning a new module style to a module is as simple as selecting a style from 
 3. Scroll down the page and select the module style from the select list.
 4. Click apply.
 
-<img src="http://bambootheme.com/showcase/jun13/images/democontent/documentation/chrome.png" width="400" height="567" alt="chrome" class="border">
+![Module Chrome](/images/documentation/chrome/chrome.png)
 
 ## Standard module chrome for ZGF4 themes
 
 - zendefault - A default module chrome
-- zentabs - a tabbed interface
+- zentabs - a tabbed interface where the title of the module is used as the trigger for the tab
 - zenslider - use the module title to slide open or closed a module
-- zenmodal - Use the module title to trigger a modal window with the module content in the modal window.
-- zenpopover - Use the module title to display a tooltip / popover with the module content. 				
+- Simple - A basic implementation of module markup				
