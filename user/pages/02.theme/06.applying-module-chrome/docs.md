@@ -15,7 +15,7 @@ Assigning a new module style to a module is as simple as selecting a style from 
 3. Scroll down the page and select the module style from the select list.
 4. Click apply.
 
-<img src="/showcase/jun13/images/democontent/documentation/chrome.png" width="400" height="567" alt="chrome" class="border">
+<img src="http://bambootheme.com/showcase/jun13/images/democontent/documentation/chrome.png" width="400" height="567" alt="chrome" class="border">
 
 ## Standard module chrome for ZGF4 themes
 
