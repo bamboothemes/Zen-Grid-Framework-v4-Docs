@@ -5,15 +5,14 @@ taxonomy:
 ---
 
 
+
 ### Using the font loader
 ![Hidden Panel](/images/documentation/fonts/font-loader.jpg)
  
 
-
 ### Setting the base font size and lineheight
 ![Hidden Panel](/images/documentation/fonts/base.jpg)
  
-
 
 ### Setting the body font
 ![Hidden Panel](/images/documentation/fonts/body-font.jpg)
@@ -27,7 +26,6 @@ taxonomy:
 ![Hidden Panel](/images/documentation/fonts/navfont.jpg)
   
  
-
 ### Setting the logo font
 ![Hidden Panel](/images/documentation/framework/logofont.jpg)
   

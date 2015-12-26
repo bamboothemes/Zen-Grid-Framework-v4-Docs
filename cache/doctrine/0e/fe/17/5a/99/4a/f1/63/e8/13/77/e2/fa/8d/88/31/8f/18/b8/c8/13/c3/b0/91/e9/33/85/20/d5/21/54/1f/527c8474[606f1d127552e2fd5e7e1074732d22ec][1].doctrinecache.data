@@ -1,0 +1,19 @@
+1451710214
+s:585:"<p>By default Zen grid framework v4 templates have the capacity to target four distinct areas of your template:</p>
+<h3>body</h3>
+<pre><code>html &gt; body {
+    font-family: 'Open Sans';
+}</code></pre>
+<h3>headings</h3>
+<pre><code>h1, h2, h3, h4, h5, h6, blockquote {
+    font-family: 'Open Sans';
+}</code></pre>
+<h3>menu</h3>
+<pre><code>#navwrap li a, #navwrap li span {
+    font-family: 'Open Sans';
+}</code></pre>
+<h3>logo</h3>
+<pre><code>#logo h1,#logo h2,#logo h3,#logo h4 {
+    font-family: 'Lato';
+}</code></pre>
+<p>They also provide the function of being able to create a </p>";

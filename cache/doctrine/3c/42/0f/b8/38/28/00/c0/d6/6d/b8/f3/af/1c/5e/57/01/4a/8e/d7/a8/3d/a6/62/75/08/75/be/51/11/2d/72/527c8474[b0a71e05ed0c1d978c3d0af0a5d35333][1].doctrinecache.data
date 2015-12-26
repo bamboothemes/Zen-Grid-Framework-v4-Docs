@@ -1,0 +1,36 @@
+1451710461
+s:2103:"<p><a href="https://www.joomlacontenteditor.net/">JCE</a> is one of the most popular wysiwyg editors for Joomla. It provides a robust and versatile solution for working with your Joomla content.</p>
+<p>By default JCE is set to load your template's css/template.css file. However if you are using custom fonts, and in particular google fonts they will not be displayed in the editor by default.</p>
+<p>Future versions of the framework will have this functionality however if you need to render fonts in your site's editor using the fonts specified in your template settings using JCE then you will need to follow these extra steps.</p>
+<h2>Create a custom editor css file.</h2>
+<ul>
+<li>Go to your site's css folder and create a new file called editor_custom.css</li>
+<li>In this file you need to import the site's template.css file or even your site's css file.
+This can be done by adding the following code:</li>
+<li>@import "template.css";</li>
+</ul>
+<p>In this file you need to also specify the fonts used in your template settings. In the example below we are loading Rochester and Open Sans:</p>
+<pre><code>@import url(http://fonts.googleapis.com/css?family=Rochester);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+body {
+    font-family: 'Rochester', sans-serif !important;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Rochester', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}</code></pre>
+<h2>Set JCE to load your new editor_custom.css file.</h2>
+<ul>
+<li>Navigate to components &gt; JCE &gt; Editor Global Configuration in your site's admin.</li>
+<li>Scroll to the Formattign and Display section and select custom css from the editor styles select box.</li>
+<li>In the input box that appears type: templates/$template/css/editor_custom.css</li>
+<li>Click save in the top left hand corner of the screen.</li>
+</ul>
+<p>Now when you visit the front end editor for your site you should view the font's specified in your editor_custom.css file.</p>
+<p>This is a temporary measure and future versions of the framework will do this for you.</p>";
