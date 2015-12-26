@@ -28,7 +28,7 @@ For this example we will use the Open Sans font rule. To find the correct syntax
 The quick use page for Open Sans looks like this:
 
 ![Quick Use Page](/images/documentation/fonts/quick-use-page.png)
-
+ 
 ## Adding the correct code
 Scroll down to the Add this code to your website section and look for the code that is highlighted in the screenshot below. The code we want to use in the template setting is the name of the font and any font weight we may have opted to use.
 
