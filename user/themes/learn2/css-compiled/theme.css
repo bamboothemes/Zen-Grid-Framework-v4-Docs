@@ -643,7 +643,7 @@ td {
   background: #f9f9f9;
   float: left;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 10; }
   #header a {
@@ -941,3 +941,26 @@ ul {
     padding: 18px 40px; }
   .searchbox label {
     color: #999; }
+
+#main-wrap {
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 1; }
+
+#announcement {
+  float: left;
+  width: 100%;
+  padding-left: 40px;
+  padding-bottom: 12px;
+  padding-top: 14px;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  background: #0082BA;
+  color: #fff;
+  margin-top: 0px; }
+  #announcement * {
+    color: #fff; }
+  #announcement a:hover {
+    color: #333; }

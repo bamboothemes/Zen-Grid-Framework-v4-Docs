@@ -139,6 +139,7 @@ jQuery(document).ready(function(){
 
 jQuery(window).on('load',function(){
 
+
   function adjustForScrollbar() {
     if ((parseInt(jQuery('#body-inner').height()) + 83) >= jQuery('#body').height()) {
       jQuery('.nav.nav-next').css({'margin-right': getScrollBarWidth()});

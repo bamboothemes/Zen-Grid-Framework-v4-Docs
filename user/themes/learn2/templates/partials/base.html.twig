@@ -238,7 +238,9 @@
     </script>
 </head>
 <body class="{{ page.header.body_classes }}" data-url="{{ page.route }}">
-    <header id="header" class="clearfix">
+    <div id="announcement"><strong>Announcing:</strong>  <a href="/jb-grav/bamboo-blog/a-new-blog-design">Our new blog design and a hello2016 coupon</a></div>
+    <div id="main-wrap">
+   	 <header id="header" class="clearfix">
     	
     		<div class="col">
     			<a href="http://www.joomlabamboo.com"><img class="logo float-left" style="width:45px" src="http://docs.joomlabamboo.com/images/jblogo.png"></a>
@@ -270,9 +272,11 @@
        
        </div>
     </div>
+    
     {% if config.plugins.breadcrumbs.enabled %}
-    {% include 'partials/breadcrumbs.html.twig' %}
+   	 {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
+   
     {% block sidebar %}
    
     <nav id="sidebar">
@@ -303,7 +307,13 @@
         </div>
         {% block navigation %}{% endblock %}
     </section>
+    <script>
+    	jQuery(document).ready(function() {
+    		$( "#announcement" ).load( "http://www.joomlabamboo.com/blog #announcement" );
+    	});
+    </script>
     {% endblock %}
     {% block analytics %}{% include 'partials/analytics.html.twig' %}{% endblock %}
+    </div>
  </body>
 </html>
