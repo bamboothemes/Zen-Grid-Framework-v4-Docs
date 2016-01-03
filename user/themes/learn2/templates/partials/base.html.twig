@@ -49,9 +49,7 @@
     
     <script>
     
-    	document.domain = "joomlabamboo.com";
-    	
-        $(document).ready(function() {
+  	 $(document).ready(function() {
     	     
     	     $('#filterlist').quicksearch('#catlist li');
     	     $('#catlist li').css('display', '');
@@ -241,7 +239,7 @@
     </script>
 </head>
 <body class="{{ page.header.body_classes }}" data-url="{{ page.route }}">
-    <div id="announcement"><strong>Announcing:</strong>  <a href="/jb-grav/bamboo-blog/a-new-blog-design">Our new blog design and a hello2016 coupon</a></div>
+    <div id="announcement"><strong>Announcing:</strong>  <a href="http://www.joomlabamboo.com/blog/bamboo-blog/a-new-blog-design">Our new blog design and a hello2016 coupon</a></div>
     <div id="main-wrap">
    	 <header id="header" class="clearfix">
     	
@@ -310,11 +308,7 @@
         </div>
         {% block navigation %}{% endblock %}
     </section>
-    <script>
-    	jQuery(document).ready(function() {
-    		$( "#announcement" ).load( "http://www.joomlabamboo.com/blog #announcement" );
-    	});
-    </script>
+
     {% endblock %}
     {% block analytics %}{% include 'partials/analytics.html.twig' %}{% endblock %}
     </div>
