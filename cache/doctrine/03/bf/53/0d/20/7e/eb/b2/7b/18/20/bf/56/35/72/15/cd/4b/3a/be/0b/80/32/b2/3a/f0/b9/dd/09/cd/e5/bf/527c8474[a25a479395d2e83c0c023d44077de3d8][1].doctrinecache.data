@@ -1,6 +1,0 @@
-1451710782
-s:584:"<p>In addition to being able to target the body, heading, logo and menu fonts it is also possible for the user to target a specific selector with the font of your choice by using the custom font selector option.</p>
-<h2>How to apply a custom font to a class</h2>
-<p>In order to apply a custom font to your page, open the template administrator to the font panel and scroll down to the bottom of the page.</p>
-<p><img src="/zgf4-docs/images/documentation/fonts/custom-font.png" alt="Basic Mode" /></p>
-<pre><code>.myspecific-rule {font-family:lato;color:red;font-size:3em}</code></pre>";

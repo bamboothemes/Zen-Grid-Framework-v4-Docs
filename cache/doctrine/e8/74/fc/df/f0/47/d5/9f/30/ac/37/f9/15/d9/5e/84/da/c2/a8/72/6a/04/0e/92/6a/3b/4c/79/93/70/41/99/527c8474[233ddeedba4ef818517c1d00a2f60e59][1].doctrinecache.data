@@ -1,6 +1,0 @@
-1447716576
-s:588:"<p><img src="/zgf4-docs/images/shortcodes/shortcode-example.jpg" alt="Zen Shortcode Example" />
-The screenshot above shows Zen Shortcode icons being used in a custom html module in the <a href="http://www.joomlabamboo.com/joomla-templates/boost">Boost Joomla template</a>.</p>
-<h2>Rendering Font icons</h2>
-<p><span style="line-height: 15.8079996109009px;">The zen shortcode plugin also makes it possible to render the fonts found in the Font Awesome v4.2 library. The plugin allows you to toggle this option on or off in order to improve the plugin performance.</span></p>
-<h3>glass</h3>";

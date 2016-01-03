@@ -1,5 +1,0 @@
-1451710662
-s:399:"<p>In addition to being able to target the body, heading, logo and menu fonts it is also possible for the user to target a specific selector with the font of your choice by using the custom font selector option.</p>
-<h2>How to apply a custom font to a class</h2>
-<p>In order to apply a custom font to your page </p>
-<pre><code>.myspecific-rule {font-family:lato;color:red;font-size:3em}</code></pre>";
