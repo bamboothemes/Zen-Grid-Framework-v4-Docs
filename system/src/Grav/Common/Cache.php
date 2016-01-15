@@ -21,6 +21,8 @@ use Grav\Common\Filesystem\Folder;
  */
 class Cache extends Getters
 {
+    use GravTrait;
+
     /**
      * @var string Cache key.
      */
@@ -36,6 +38,10 @@ class Cache extends Getters
      */
     protected $driver;
 
+    protected $driver_name;
+
+    protected $driver_setting;
+
     /**
      * @var bool
      */
@@ -44,30 +50,30 @@ class Cache extends Getters
     protected $cache_dir;
 
     protected static $standard_remove = [
-        'cache/twig/',
-        'cache/doctrine/',
-        'cache/compiled/',
-        'cache/validated-',
-        'images/',
-        'assets/',
+        'cache://twig/',
+        'cache://doctrine/',
+        'cache://compiled/',
+        'cache://validated-',
+        'cache://images',
+        'asset://',
     ];
 
     protected static $all_remove = [
-        'cache/',
-        'images/',
-        'assets/'
+        'cache://',
+        'cache://images',
+        'asset://'
     ];
 
     protected static $assets_remove = [
-        'assets/'
+        'asset://'
     ];
 
     protected static $images_remove = [
-        'images/'
+        'cache://images'
     ];
 
     protected static $cache_remove = [
-        'cache/'
+        'cache://'
     ];
 
     /**
@@ -102,12 +108,18 @@ class Cache extends Getters
         $this->enabled = (bool) $this->config->get('system.cache.enabled');
 
         // Cache key allows us to invalidate all cache on configuration changes.
-        $this->key = substr(md5(($prefix ? $prefix : 'g') . $uri->rootUrl(true) . $this->config->key() . GRAV_VERSION), 2, 8);
+        $this->key = ($prefix ? $prefix : 'g') . '-' . substr(md5($uri->rootUrl(true) . $this->config->key() . GRAV_VERSION), 2, 8);
+
+        $this->driver_setting = $this->config->get('system.cache.driver');
 
         $this->driver = $this->getCacheDriver();
 
         // Set the cache namespace to our unique key
         $this->driver->setNamespace($this->key);
+
+        // Dump Cache state
+        $grav['debugger']->addMessage('Cache: [' . ($this->enabled ? 'true' : 'false') . '] Setting: [' . $this->driver_setting . '] Driver: [' . $this->driver_name . ']');
+
     }
 
     /**
@@ -119,11 +131,13 @@ class Cache extends Getters
      */
     public function getCacheDriver()
     {
-        $setting = $this->config->get('system.cache.driver');
+        $setting = $this->driver_setting;
         $driver_name = 'file';
 
         if (!$setting || $setting == 'auto') {
-            if (extension_loaded('apc')) {
+            if (extension_loaded('apcu')) {
+                $driver_name = 'apcu';
+            } elseif (extension_loaded('apc')) {
                 $driver_name = 'apc';
             } elseif (extension_loaded('wincache')) {
                 $driver_name = 'wincache';
@@ -134,9 +148,15 @@ class Cache extends Getters
             $driver_name = $setting;
         }
 
+        $this->driver_name = $driver_name;
+
         switch ($driver_name) {
             case 'apc':
                 $driver = new \Doctrine\Common\Cache\ApcCache();
+                break;
+
+            case 'apcu':
+                $driver = new \Doctrine\Common\Cache\ApcuCache();
                 break;
 
             case 'wincache':
@@ -153,6 +173,15 @@ class Cache extends Getters
                                    $this->config->get('system.cache.memcache.port', 11211));
                 $driver = new \Doctrine\Common\Cache\MemcacheCache();
                 $driver->setMemcache($memcache);
+                break;
+
+            case 'redis':
+                $redis = new \Redis();
+                $redis->connect($this->config->get('system.cache.redis.server','localhost'),
+                                $this->config->get('system.cache.redis.port', 6379));
+
+                $driver = new \Doctrine\Common\Cache\RedisCache();
+                $driver->setRedis($redis);
                 break;
 
             default:
@@ -212,7 +241,7 @@ class Cache extends Getters
      */
     public static function clearCache($remove = 'standard')
     {
-
+        $locator = self::getGrav()['locator'];
         $output = [];
         $user_config = USER_DIR . 'config/system.yaml';
 
@@ -234,26 +263,33 @@ class Cache extends Getters
         }
 
 
-        foreach ($remove_paths as $path) {
+        foreach ($remove_paths as $stream) {
+
+            // Convert stream to a real path
+            $path = $locator->findResource($stream, true, true);
+            // Make sure path exists before proceeding, otherwise we would wipe ROOT_DIR
+            if (!$path)
+                throw new \RuntimeException("Stream '{$stream}' not found", 500);
 
             $anything = false;
-            $files = glob(ROOT_DIR . $path . '*');
+            $files = glob($path . '/*');
 
-            foreach ($files as $file) {
-                if (is_file($file)) {
-                    if (@unlink($file)) {
-                        $anything = true;
-                    }
-                } elseif (is_dir($file)) {
-                    if (@Folder::delete($file)) {
-                        $anything = true;
+            if (is_array($files)) {
+                foreach ($files as $file) {
+                    if (is_file($file)) {
+                        if (@unlink($file)) {
+                            $anything = true;
+                        }
+                    } elseif (is_dir($file)) {
+                        if (@Folder::delete($file)) {
+                            $anything = true;
+                        }
                     }
                 }
             }
 
-
             if ($anything) {
-                $output[] = '<red>Cleared:  </red>' . $path . '*';
+                $output[] = '<red>Cleared:  </red>' . $path . '/*';
             }
         }
 

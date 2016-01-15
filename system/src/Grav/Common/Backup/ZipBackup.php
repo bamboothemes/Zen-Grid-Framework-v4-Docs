@@ -3,6 +3,7 @@ namespace Grav\Common\Backup;
 
 use Grav\Common\GravTrait;
 use Grav\Common\Filesystem\Folder;
+use Grav\Common\Inflector;
 
 /**
  * The ZipBackup class lets you create simple zip-backups of a grav site
@@ -23,6 +24,8 @@ class ZipBackup
 
     protected static $ignoreFolders = [
         '.git',
+        '.svn',
+        '.hg',
         '.idea'
     ];
 
@@ -39,9 +42,11 @@ class ZipBackup
 
         $name = self::getGrav()['config']->get('site.title', basename(GRAV_ROOT));
 
+        $inflector = new Inflector();
+
         if (is_dir($destination)) {
             $date = date('YmdHis', time());
-            $filename = $name . '-' . $date . '.zip';
+            $filename = trim($inflector->hyphenize($name), '-') . '-' . $date . '.zip';
             $destination = rtrim($destination, DS) . DS . $filename;
         }
 
@@ -58,6 +63,8 @@ class ZipBackup
 
         $zip = new \ZipArchive();
         $zip->open($destination, \ZipArchive::CREATE);
+
+        $max_execution_time = ini_set('max_execution_time', 600);
 
         static::folderToZip(GRAV_ROOT, $zip, strlen(rtrim(GRAV_ROOT, DS) . DS), $messager);
 
@@ -79,6 +86,10 @@ class ZipBackup
         ]);
 
         $zip->close();
+
+        if ($max_execution_time !== false) {
+            ini_set('max_execution_time', $max_execution_time);
+        }
 
         return $destination;
     }

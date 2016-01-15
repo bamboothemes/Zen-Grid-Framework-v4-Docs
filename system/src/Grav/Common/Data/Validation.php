@@ -1,6 +1,10 @@
 <?php
 namespace Grav\Common\Data;
 
+use Grav\Common\GravTrait;
+use Symfony\Component\Yaml\Exception\ParseException;
+use Symfony\Component\Yaml\Parser;
+
 /**
  * Data validation.
  *
@@ -9,6 +13,8 @@ namespace Grav\Common\Data;
  */
 class Validation
 {
+    use GravTrait;
+
     /**
      * Validate value against a blueprint field definition.
      *
@@ -25,11 +31,19 @@ class Validation
             return;
         }
 
+        // special case for files, value is never empty and errors with code 4 instead
+        if (empty($validate['required']) && $field['type'] == 'file' && (isset($value['error']) && ($value['error'] == UPLOAD_ERR_NO_FILE || in_array(UPLOAD_ERR_NO_FILE, $value['error'])))) {
+            return;
+        }
+
+        // Get language class
+        $language = self::getGrav()['language'];
+
         // Validate type with fallback type text.
         $type = (string) isset($field['validate']['type']) ? $field['validate']['type'] : $field['type'];
         $method = 'type'.strtr($type, '-', '_');
-        $name = ucfirst($field['label'] ? $field['label'] : $field['name']);
-        $message = (string) isset($field['validate']['message']) ? $field['validate']['message'] : 'Invalid input in ' . $name;
+        $name = ucfirst(isset($field['label']) ? $field['label'] : $field['name']);
+        $message = (string) isset($field['validate']['message']) ? $language->translate($field['validate']['message']) : $language->translate('FORM.INVALID_INPUT', null, true) . ' "' . $language->translate($name) . '"';
 
         if (method_exists(__CLASS__, $method)) {
             $success = self::$method($value, $validate, $field);
@@ -67,6 +81,21 @@ class Validation
         // If value isn't required, we will return null if empty value is given.
         if (empty($validate['required']) && ($value === null || $value === '')) {
             return null;
+        }
+
+        // special case for files, value is never empty and errors with code 4 instead
+        if (empty($validate['required']) && $field['type'] == 'file' && (isset($value['error']) && ($value['error'] == UPLOAD_ERR_NO_FILE || in_array(UPLOAD_ERR_NO_FILE, $value['error'])))) {
+            return null;
+        }
+
+        // if this is a YAML field, simply parse it and return the value
+        if (isset($field['yaml']) && $field['yaml'] === true) {
+            try {
+                $yaml = new Parser();
+                return $yaml->parse($value);
+            } catch (ParseException $e) {
+                throw new \RuntimeException($e->getMessage());
+            }
         }
 
         // Validate type with fallback type text.
@@ -240,6 +269,32 @@ class Validation
     }
 
     /**
+     * Custom input: file
+     *
+     * @param  mixed  $value   Value to be validated.
+     * @param  array  $params  Validation parameters.
+     * @param  array  $field   Blueprint for the field.
+     * @return bool   True if validation succeeded.
+     */
+    public static function typeFile($value, array $params, array $field)
+    {
+        return self::typeArray((array) $value, $params, $field);
+    }
+
+    protected static function filterFile($value, array $params, array $field)
+    {
+        if (isset($field['multiple']) && $field['multiple'] == true) {
+            return (array) $value;
+        }
+
+        if (is_array($value)) {
+            return reset($value);
+        }
+
+        return $value;
+    }
+
+    /**
      * HTML5 input: select
      *
      * @param  mixed  $value   Value to be validated.
@@ -287,6 +342,17 @@ class Validation
     {
         return (int) $value;
     }
+
+    protected static function filterDateTime($value, array $params, array $field)
+    {
+        $format = self::getGrav()['config']->get('system.pages.dateformat.default');
+        if ($format) {
+            $converted = new \DateTime($value);
+            return $converted->format($format);
+        }
+        return $value;
+    }
+
 
     /**
      * HTML5 input: range
@@ -356,7 +422,6 @@ class Validation
      */
     public static function typeDatetime($value, array $params, array $field)
     {
-        // TODO: add min, max and range.
         if ($value instanceof \DateTime) {
             return true;
         } elseif (!is_string($value)) {
@@ -503,7 +568,11 @@ class Validation
 
         if ($multi) {
             foreach ($values as $key => $value) {
-                $values[$key] = explode(',', $value[0]);
+                if (is_array($value)) {
+                    $value = implode(',', $value);
+                }
+
+                $values[$key] =  array_map('trim', explode(',', $value));
             }
         }
 
@@ -556,6 +625,10 @@ class Validation
 
     public static function validateRequired($value, $params)
     {
+        if (is_string($value)) {
+            $value = trim($value);
+        }
+
         return (bool) $params !== true || !empty($value);
     }
 

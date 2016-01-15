@@ -29,7 +29,7 @@ function parse_user_agent( $u_agent = null ) {
 
 	if( preg_match('/\((.*?)\)/im', $u_agent, $parent_matches) ) {
 
-		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|(New\ )?Nintendo\ (WiiU?|3DS)|Xbox(\ One)?)
+		preg_match_all('/(?P<platform>BB\d+;|Android|CrOS|Tizen|iPhone|iPad|iPod|Linux|Macintosh|Windows(\ Phone)?|Silk|linux-gnu|BlackBerry|PlayBook|(New\ )?Nintendo\ (WiiU?|3?DS)|Xbox(\ One)?)
 				(?:\ [^;]*)?
 				(?:;|$)/imx', $parent_matches[1], $result, PREG_PATTERN_ORDER);
 
@@ -52,7 +52,7 @@ function parse_user_agent( $u_agent = null ) {
 		$platform = 'Chrome OS';
 	}
 
-	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire\ Build)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|TizenBrowser|Chrome|
+	preg_match_all('%(?P<browser>Camino|Kindle(\ Fire)?|Firefox|Iceweasel|Safari|MSIE|Trident|AppleWebKit|TizenBrowser|Chrome|
 			Vivaldi|IEMobile|Opera|OPR|Silk|Midori|Edge|CriOS|
 			Baiduspider|Googlebot|YandexBot|bingbot|Lynx|Version|Wget|curl|
 			NintendoBrowser|PLAYSTATION\ (\d|Vita)+)
@@ -62,9 +62,8 @@ function parse_user_agent( $u_agent = null ) {
 
 	// If nothing matched, return null (to avoid undefined index errors)
 	if( !isset($result['browser'][0]) || !isset($result['version'][0]) ) {
-		if( !$platform && preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?([;| ]\ ?.*)?$%ix', $u_agent, $result)
-		) {
-			return array( 'platform' => null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null );
+		if( preg_match('%^(?!Mozilla)(?P<browser>[A-Z0-9\-]+)(/(?P<version>[0-9A-Z.]+))?%ix', $u_agent, $result) ) {
+			return array( 'platform' => $platform ?: null, 'browser' => $result['browser'], 'version' => isset($result['version']) ? $result['version'] ?: null : null );
 		}
 
 		return $empty;
@@ -77,8 +76,10 @@ function parse_user_agent( $u_agent = null ) {
 	$browser = $result['browser'][0];
 	$version = $result['version'][0];
 
-	$find = function ( $search, &$key ) use ( $result ) {
-		$xkey = array_search(strtolower($search), array_map('strtolower', $result['browser']));
+	$lowerBrowser = array_map('strtolower', $result['browser']);
+
+	$find = function ( $search, &$key ) use ( $lowerBrowser ) {
+		$xkey = array_search(strtolower($search), $lowerBrowser);
 		if( $xkey !== false ) {
 			$key = $xkey;
 
@@ -95,7 +96,7 @@ function parse_user_agent( $u_agent = null ) {
 	} elseif( $find('Playstation Vita', $key) ) {
 		$platform = 'PlayStation Vita';
 		$browser  = 'Browser';
-	} elseif( $find('Kindle Fire Build', $key) || $find('Silk', $key) ) {
+	} elseif( $find('Kindle Fire', $key) || $find('Silk', $key) ) {
 		$browser  = $result['browser'][$key] == 'Silk' ? 'Silk' : 'Kindle';
 		$platform = 'Kindle Fire';
 		if( !($version = $result['version'][$key]) || !is_numeric($version[0]) ) {
@@ -127,6 +128,10 @@ function parse_user_agent( $u_agent = null ) {
 			$version = $result['version'][$ekey];
 		} else {
 			$version = $rv_result ?: $result['version'][$key];
+		}
+
+		if( version_compare($version, '12', '>=') ) {
+			$browser = 'Edge';
 		}
 	} elseif( $find('Vivaldi', $key) ) {
 		$browser = 'Vivaldi';

@@ -5,6 +5,7 @@ use Grav\Common\Grav;
 use Grav\Common\Config\Config;
 use Grav\Common\Page\Page;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
+use RocketTheme\Toolbox\Event\Event;
 
 /**
  * The Twig object handles all the Twig template rendering for Grav. It's a singleton object
@@ -79,11 +80,14 @@ class Twig
 
             $active_language = $language->getActive();
 
-            $language_append = $active_language ? '/'.$active_language : '';
+            $language_append = '';
+            if ($language->getDefault() != $active_language || $config->get('system.languages.include_default_lang') === true) {
+                $language_append = $active_language ? '/' . $active_language : '';
+            }
 
             // handle language templates if available
             if ($language->enabled()) {
-                $lang_templates = $locator->findResource('theme://templates/'.$active_language);
+                $lang_templates = $locator->findResource('theme://templates/'.($active_language ? $active_language : $language->getDefault()));
                 if ($lang_templates) {
                     $this->twig_paths[] = $lang_templates;
                 }
@@ -103,11 +107,6 @@ class Twig
             }
 
             $this->twig = new TwigEnvironment($loader_chain, $params);
-            if ($debugger->enabled() && $config->get('system.debugger.twig')) {
-                $this->twig = new TraceableTwigEnvironment($this->twig);
-                $collector = new \DebugBar\Bridge\Twig\TwigCollector($this->twig);
-                $debugger->addCollector($collector);
-            }
 
             if ($config->get('system.twig.undefined_functions')) {
                 $this->twig->registerUndefinedFunctionCallback(function ($name) {
@@ -145,11 +144,11 @@ class Twig
 
             // Set some standard variables for twig
             $this->twig_vars = array(
-                'grav' => $this->grav,
                 'config' => $config,
                 'uri' => $this->grav['uri'],
                 'base_dir' => rtrim(ROOT_DIR, '/'),
                 'base_url' => $this->grav['base_url'] . $language_append,
+                'base_url_simple' => $this->grav['base_url'],
                 'base_url_absolute' => $this->grav['base_url_absolute'] . $language_append,
                 'base_url_relative' => $this->grav['base_url_relative'] . $language_append,
                 'theme_dir' => $locator->findResource('theme://'),
@@ -204,7 +203,7 @@ class Twig
         $content = $content !== null ? $content : $item->content();
 
         // override the twig header vars for local resolution
-        $this->grav->fireEvent('onTwigPageVariables');
+        $this->grav->fireEvent('onTwigPageVariables',  new Event(['page' => $item]));
         $twig_vars = $this->twig_vars;
 
         $twig_vars['page'] = $item;
@@ -302,12 +301,14 @@ class Twig
         $pages = $this->grav['pages'];
         $page = $this->grav['page'];
         $content = $page->content();
+        $config = $this->grav['config'];
 
         $twig_vars = $this->twig_vars;
 
         $twig_vars['pages'] = $pages->root();
         $twig_vars['page'] = $page;
         $twig_vars['header'] = $page->header();
+        $twig_vars['media'] = $page->media();
         $twig_vars['content'] = $content;
         $ext = '.' . ($format ? $format : 'html') . TWIG_EXT;
 
@@ -323,15 +324,16 @@ class Twig
         try {
             $output = $this->twig->render($template, $twig_vars);
         } catch (\Twig_Error_Loader $e) {
-            // If loader error, and not .html.twig, try it as fallback
+            $error_msg = $e->getMessage();
+            // Try html version of this template if initial template was NOT html
             if ($ext != '.html'.TWIG_EXT) {
                 try {
                     $output = $this->twig->render($page->template().'.html'.TWIG_EXT, $twig_vars);
                 } catch (\Twig_Error_Loader $e) {
-                    throw new \RuntimeException($e->getRawMessage(), 404, $e);
+                    throw new \RuntimeException($error_msg, 400, $e);
                 }
             } else {
-                throw new \RuntimeException($e->getRawMessage(), 404, $e);
+                throw new \RuntimeException($error_msg, 400, $e);
             }
         }
 
