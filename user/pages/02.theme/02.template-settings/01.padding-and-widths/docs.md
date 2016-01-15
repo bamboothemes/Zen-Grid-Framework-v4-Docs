@@ -19,7 +19,7 @@ The setting that controls that percentage is found in the **responsive template 
 
 ![Width](/images/settings/container-widths.png)
 
-
+ 
 **LESS Variables**
 
 	@twidth: 980px // Maximum width of the template
