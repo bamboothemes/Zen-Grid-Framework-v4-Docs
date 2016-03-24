@@ -31,5 +31,28 @@ e. Save the plugin settings.
 If you are using a Zen Grid Framework v4 based theme then you will need to also disable the Font Awesome library in the template. This will prevent the template from loading it's own version of the Font Awesome library and will ensure that the syntax used for the remote / cdn version of the plugin is used for all elements int he template that use Font Awesome icons.
 
 ![Font Awesome Prefix](/images/font-awesome/disable-font-awesome.png)
+
+
+## Load the local plugin version of the Font Awesome library.
+In some cases you may wish to override the version of Font Awesome found in your template with a newer version in the plugin. This may happen in circumstances where the Font Awesome library is updated in the plugin before it is updated in your template.
+
+To use the local version follow these steps:
+
+a. Navigate to extensions > plugin manager 
+b. Filter the results to show the shortcodes plugin
+
+![Shortcodes](/images/font-awesome/shortcodes.png)
+
+c. Edit the plugin settings and navigate to the options panel.
+
+d. Set the Load Font Awesome CSS option to "Load local version".
+
+e. Set the custom prefix for the plugin to fa fa-
+
+![Font Awesome Prefix](/images/font-awesome/set-font-awesome-prefix.png)
+ 
+e. Save the plugin settings.
+
+
  
 
