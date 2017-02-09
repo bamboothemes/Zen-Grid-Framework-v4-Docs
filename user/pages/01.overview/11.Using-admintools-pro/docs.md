@@ -50,6 +50,7 @@ In order to allow access to this template functionality you need to "Allow acces
 - Navigate to the Visual fingerprinting protection tab.
 - Set the Block tmpl=foo system template switch to no.
 - Set the Block template=foo site template switch to no.
+- Set the allow site templates switch to yes.
 
 ![Waf Settings](/images/documentation/admintools/waf-settings.png)
 
